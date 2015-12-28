@@ -1,0 +1,6 @@
+(ACPLAN(robbers-dog-planACPLAN-START robbers-dog-plan2 robbers-dog-plan)  (parked                 (BLANK          , car            ,  , , ,)))
+(ACPLAN(robbers-dog-plan2 robbers-dog-plan3            robbers-dog-plan)  (walked-toward          (BLANK          , market     ,  , , ,)))
+(ACPLAN(robbers-dog-plan3 robbers-dog-plan4            robbers-dog-plan)  (grabbed                (dog            , robber pants    ,  , , ,)))
+(ACPLAN(robbers-dog-plan4 robbers-dog-plan5            robbers-dog-plan)  (got-scared             (BLANK          ,       ,        , , ,)))
+(ACPLAN(robbers-dog-plan5 robbers-dog-plan6            robbers-dog-plan SUBPLAN run-away-from-subplan)  (             (          ,            ,        , , ,)))
+(ACPLAN(robbers-dog-plan6 robbers-dog-planACPLAN-END   robbers-dog-plan)  (steal-merchandise-from (agent          ,            , market  , , ,)))

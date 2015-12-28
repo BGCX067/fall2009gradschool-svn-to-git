@@ -1,0 +1,7 @@
+(ACPLAN(illegal-lobby-planACPLAN-START illegal-lobby-plan2 illegal-lobby-plan)  (working-on        (BLANK          , BLANK            ,  , , ,)))
+(ACPLAN(illegal-lobby-plan2 illegal-lobby-plan3            illegal-lobby-plan)  (broke-ground      (BLANK              , BLANK     ,  , , ,)))
+(ACPLAN(illegal-lobby-plan3 illegal-lobby-plan4            illegal-lobby-plan)  (invested          (BLANK          , BLANK    ,  , , ,)))
+(ACPLAN(illegal-lobby-plan4 illegal-lobby-plan5            illegal-lobby-plan)  (invested          (BLANK          , BLANK    ,        , , ,)))
+(ACPLAN(illegal-lobby-plan5 illegal-lobby-planACPLAN-END   illegal-lobby-plan)  (giving-funding-to-constituent-research-firm (agent          ,       ,   ,  , ,)))
+
+

@@ -1,0 +1,366 @@
+File "aicop.txt" is being translated...
+File "rob-store-plan.txt" is being translated...
+We have a subplan
+File "robbers-dog-plan.txt" is being translated...
+We have a subplan
+File "man-from-bushes-plan.txt" is being translated...
+File "voting-machine-contract-plan.txt" is being translated...
+File "research-fraud-plan.txt" is being translated...
+We have a subplan
+File "mayoral-race-shenanigans-plan.txt" is being translated...
+File "biological-weapon-development-plan.txt" is being translated...
+We have a subplan
+File "illegal-lobby-plan.txt" is being translated...
+File "discontinued-investigation-plan.txt" is being translated...
+File "enablemetaqueing.txt" is being translated...
+Malformed Registry
+File "meta.txt" is being translated...
+File "rob-store-fraud-subplan.txt" is being translated...
+We have a subplan
+We have a subplan
+We have a subplan
+File "run-away-from-subplan.txt" is being translated...
+File "faked-research-subplan.txt" is being translated...
+File "disease-research-subplan.txt" is being translated...
+File "goto-store-subplan.txt" is being translated...
+File "fake-id-subplan.txt" is being translated...
+File "runaway-subplan.txt" is being translated...
+We have a subplan
+File "run-away-from-subplan.txt" is being translated...
+
+
+
+----------------------------------------------------------------
+
+Another Chain: rob-store-plan
+
+Sub Script: 
+
+	(     ( go-to, ( robert-e-ford,store,,,, ))) 	
+Intention of robert-e-ford: 
+		go-to-store 
+
+
+Sub Script: 
+
+												   ORACLE SAYS: robert-e-ford wants-to-buy-some-stuff
+	(     ( give, ( robert-e-ford,fake-check,clerk,,, ))) 
+												   ORACLE SAYS: robert-e-ford wants-to-commit-fraud
+	(     ( give, ( robert-e-ford,fake-id,clerk,,, ))) 	
+Intention of robert-e-ford: 
+		fake-identity 
+
+
+												   ORACLE SAYS: clerk someone-suspects-fraud
+(     ( suspect, ( clerk,fraud,,,, ))) 
+												   ORACLE SAYS: robert-e-ford suspected-correctly-GOT-CAUGHT-now-runaway
+(     ( get-caught, ( robert-e-ford,,,,, ))) 
+												   ORACLE SAYS: clerk the-police-are-coming-to-catch-a-bad-guy-that-got-caught
+(     ( call, ( clerk,police,,,, ))) 
+Sub Script: 
+
+												   ORACLE SAYS: robert-e-ford running-from-the-police-to-escape-capture
+	(     ( run-away, ( robert-e-ford,,,,, ))) 	
+Intention of robert-e-ford: 
+		runaway 
+
+
+												   ORACLE SAYS: police-officers trying-to-escape-capture
+(     ( chase-down, ( police-officers,robert-e-ford,,,, ))) 
+												   ORACLE SAYS: robert-e-ford got-away-because-cops-eat-too-many-doughnuts
+(     ( get-away, ( robert-e-ford,accomplice,,,, ))) 
+Intention of robert-e-ford: 
+	run-away-from-cops 
+
+Intention of robert-e-ford: 
+	commit-fraud 
+
+Intention of robert-e-ford: 
+	commit-fraud 
+
+
+Intention of robert-e-ford: 
+	get-rich 
+
+META REASONER SAYS: 
+
+	 - Most Frequent Agent: robert-e-ford occurs 6 times in this chain.
+	 - Second most Frequent Agent: agent occurs 4 times in this chain.
+	 - Most Frequent Object:  occurs 14 times in this chain.
+	 - No mismatch between current script frame and most frequent agents used in script.
+	 - robert-e-ford is the most frequent agent, so it must be central to intentions of actors in this chain.
+
+
+----------------------------------------------------------------
+
+Another Chain: robbers-dog-plan
+
+(     ( parked, ( robbers,car,,,, ))) 
+												   ORACLE SAYS: robbers going-to-the-market
+(     ( walked-toward, ( robbers,market,,,, ))) 
+												   ORACLE SAYS: dog either-a-someone-or-something-grabbed-pants
+(     ( grabbed, ( dog,robber,pants,,, ))) 
+												   ORACLE SAYS: robbers if-someone-grabbed-my-pants-I-would-be-scared-too
+(     ( got-scared, ( robbers,,,,, ))) 
+Sub Script: 
+
+												   ORACLE SAYS: robbers run-away-from-whatever-scared-you
+	(     ( run-away, ( robbers,,,,, ))) 	
+Intention of robbers: 
+		runaway 
+
+
+Intention of robbers: 
+	steal-merchandise-from 
+market 
+
+
+META REASONER SAYS: 
+
+	 - Most Frequent Agent: robbers occurs 3 times in this chain.
+	 - Second most Frequent Agent: agent occurs 1 times in this chain.
+	 - Most Frequent Object:  occurs 6 times in this chain.
+	 - No mismatch between current script frame and most frequent agents used in script.
+	 - Running Fixup Code, because the current agent (robert-e-ford) is not the most frequently used agent in this chain (robbers)
+	 - AICOP was right, there is a better option for this match, and it was:  ( run-away, ( robbers,,,,, )) 
+	 - robbers is the most frequent agent, so it must be central to intentions of actors in this chain.
+	 - Script has no specific information about which actor the intension belongs too. Assuming it is the Agent (the most frequent agent) mentioned above.
+
+
+----------------------------------------------------------------
+
+Another Chain: man-from-bushes-plan
+
+(     ( entered-car, ( employee,,,,, ))) 
+												   ORACLE SAYS: man getting-into-the-car
+(     ( came-from, ( man,behind-bushes,,,, ))) 
+												   ORACLE SAYS: man the-guy-behind-the-bushes-seems-suspicious
+(     ( opened, ( man,car-door,,,, ))) 
+												   ORACLE SAYS: man person-is-pulled-from-car-and-assaulted
+(     ( pulled-from, ( man,employee,car,,, ))) 
+												   ORACLE SAYS: man Pulled-From-Car-so-a-thief-can-steel-something
+(     ( attempted-snatch, ( man,purse,,,, ))) 
+												   ORACLE SAYS: man theif-succeeded-in-snatching
+(     ( snatch, ( man,purse,,,, ))) 
+(     ( hit, ( man,head,employee,,, ))) 
+												   ORACLE SAYS: man hit-and-knocked-down
+(     ( knocked-down, ( man,employee,,,, ))) 
+												   ORACLE SAYS: employee is-hurt
+(     ( yelled, ( employee,,,,, ))) 
+												   ORACLE SAYS: man makes-no-sense-did-he-develop-a-concience
+(     ( ran-away-without, ( man,purse,,,, ))) 
+Intention of man: 
+	steal-purse-from 
+employee 
+
+
+META REASONER SAYS: 
+
+	 - Most Frequent Agent: man occurs 8 times in this chain.
+	 - Second most Frequent Agent: employee occurs 2 times in this chain.
+	 - Most Frequent Object:  occurs 10 times in this chain.
+	 - No mismatch between current script frame and most frequent agents used in script.
+	 - man is the most frequent agent, so it must be central to intentions of actors in this chain.
+	 - Script has an intention for a specific Co-Agent
+	 - AICOP's Second Most Frequent Agent was employee so that is probably a correct actor to use as the co-agent.
+
+
+----------------------------------------------------------------
+
+Another Chain: voting-machine-contract-plan
+
+(     ( signed-contract, ( rex-luthor,voting-machines,,,, ))) 
+												   ORACLE SAYS: voting-machines suckered-into-buying
+(     ( installed, ( voting-machines,,,,, ))) 
+												   ORACLE SAYS: voters had-problems-already-must-be-american-made
+(     ( had-problems, ( voters,voting-machines,,,, ))) 
+												   ORACLE SAYS: rex-luthor this-wont-happen-again-says-steve-balmer
+(     ( asked-to-investigate, ( rex-luthor,voting-machines,,,, ))) 
+												   ORACLE SAYS: rex-luthor trying-to-keep-public-calm
+(     ( pledged-answer, ( rex-luthor,voting-machines,,,, ))) 
+Intention of rex-luthor: 
+	modernize-voting-machines-for 
+voters 
+
+
+META REASONER SAYS: 
+
+	 - Most Frequent Agent: rex-luthor occurs 3 times in this chain.
+	 - Second most Frequent Agent: voters occurs 1 times in this chain.
+	 - Most Frequent Object:  occurs 5 times in this chain.
+	 - No mismatch between current script frame and most frequent agents used in script.
+	 - rex-luthor is the most frequent agent, so it must be central to intentions of actors in this chain.
+	 - Script has no specific information about which actor the intension belongs too. Assuming it is the Agent (the most frequent agent) mentioned above.
+
+
+----------------------------------------------------------------
+
+Another Chain: research-fraud-plan
+
+(     ( researches, ( swiss-research-board,transmissible-spongiform-encephalopathies,,,, ))) 
+												   ORACLE SAYS: swiss-research-board needs-to-conduct-investigation
+(     ( was-alerted, ( swiss-research-board,anonymous-tip,von-ryker-institute,,, ))) 
+												   ORACLE SAYS: swiss-research-board investigation-started
+(     ( investigating, ( swiss-research-board,misuse-state-funds,von-ryker,,, ))) 
+Sub Script: 
+
+	(     ( investigating, ( swiss-research-board,misuse-state-funds,von-ryker,,, ))) 
+												   ORACLE SAYS: von-ryker produced-report
+	(     ( reported, ( von-ryker,papers,swiss-research-board,,, ))) 
+	(     ( continuing, ( swiss-research-board,investigation,von-ryker-institute,,, ))) 
+												   ORACLE SAYS: von-ryker faked-investigation
+	(     ( faked, ( von-ryker,prion-diseases-papers,,,, ))) 	
+Intention of swiss-research-board: 
+		conducted-fake-investigation 
+	von-ryker 
+
+
+
+												   ORACLE SAYS: von-ryker no-action-was-taken
+(     ( remains, ( von-ryker,director-von-ryker-institute,,,, ))) 
+												   ORACLE SAYS: shut-down action-was-taken-but-unexpected
+(     ( not-expected, ( shut-down,,,,, ))) 
+Intention of swiss-research-board: 
+	to-stop-fradulent-investigation-by 
+von-ryker 
+
+
+META REASONER SAYS: 
+
+	 - Most Frequent Agent: swiss-research-board occurs 4 times in this chain.
+	 - Second most Frequent Agent: von-ryker occurs 4 times in this chain.
+	 - Most Frequent Object:  occurs 10 times in this chain.
+	 - No mismatch between current script frame and most frequent agents used in script.
+	 - Running Fixup Code, because the current agent (von-ryker) is not the most frequently used agent in this chain (swiss-research-board)
+	 - AICOP was right, there is a better option for this match, and it was:  ( investigating, ( swiss-research-board,misuse-state-funds,von-ryker,,, )) 
+	 - swiss-research-board is the most frequent agent, so it must be central to intentions of actors in this chain.
+	 - Script has an intention for a specific Co-Agent
+	 - AICOP's Second Most Frequent Agent was von-ryker so that is probably a correct actor to use as the co-agent.
+
+
+----------------------------------------------------------------
+
+Another Chain: mayoral-race-shenanigans-plan
+
+(     ( voted-against, ( john-torch,liqour-license,,,, ))) 
+												   ORACLE SAYS: john-torch is-a-so-called-anti-corruption-person
+(     ( opposed, ( john-torch,gambling,,,, ))) 
+(     ( raised, ( john-torch,30000,,,, ))) 
+												   ORACLE SAYS: john-torch wants-to-become-elected-official
+(     ( runs-for, ( john-torch,alderwood-mayor,,,, ))) 
+(     ( were-taken, ( steamy-photos,starbucks,,,, ))) 
+												   ORACLE SAYS: steamy-photos are-going-to-get-out-in-the-open
+(     ( print, ( steamy-photos,starbucks,,,, ))) 
+(     ( requested, ( pete-sartin,resignation,john-torch,,, ))) 
+												   ORACLE SAYS: john-torch scandal-and-controversy
+(     ( refused, ( john-torch,resignation,,,, ))) 
+(     ( decreased, ( john-torch,effort,after-starbucks-scandal,,, ))) 
+												   ORACLE SAYS: john-torch quiting-race-political-career-looks-bleek
+(     ( drops-out, ( john-torch,mayoral-race,,,, ))) 
+Intention of john-torch: 
+	wanted-to-be-mayor-but-was-thwarted-by 
+political-opponents 
+
+
+META REASONER SAYS: 
+
+	 - Most Frequent Agent: john-torch occurs 7 times in this chain.
+	 - Second most Frequent Agent: steamy-photos occurs 2 times in this chain.
+	 - Most Frequent Object:  occurs 10 times in this chain.
+	 - No mismatch between current script frame and most frequent agents used in script.
+	 - john-torch is the most frequent agent, so it must be central to intentions of actors in this chain.
+	 - Script has no specific information about which actor the intension belongs too. Assuming it is the Agent (the most frequent agent) mentioned above.
+
+
+----------------------------------------------------------------
+
+Another Chain: biological-weapon-development-plan
+
+(     ( founded, ( philip-boynton,boynton-labs,,,, ))) 
+												   ORACLE SAYS: two-key-scientists started-something
+(     ( started, ( two-key-scientists,boynton-labs,,,, ))) 
+(     ( worked-with, ( philip-boynton,rex-luthor,,,, ))) 
+(     ( chose, ( us-government,boynton-labs,test-for-mad-cow-disease,,, ))) 
+(     ( approved, ( agriculture-department,rapid-testing-boynton-labs,,,, ))) 
+Sub Script: 
+
+	(     ( injected-mouse, ( boynton-labs,prion-disease,,,, ))) 
+	(     ( treatment-mouse, ( boynton-labs,prion-disease,,,, ))) 
+	(     ( injected-cow, ( boynton-labs,prion-disease,,,, ))) 
+	(     ( treatment-cow, ( boynton-labs,prion-disease,,,, ))) 
+	(     ( have-developed, ( boynton-labs,prion-disease,,,, ))) 
+												   ORACLE SAYS: boynton-labs developed-disease
+	(     ( cured-disease, ( boynton-labs,prion-disease,,,, ))) 	
+Intention of boynton-labs: 
+		develop-disease 
+	prion-disease 
+
+
+
+Intention of boynton-labs: 
+	develop-biological-weapon 
+prion-disease 
+
+
+META REASONER SAYS: 
+
+	 - Most Frequent Agent: boynton-labs occurs 6 times in this chain.
+	 - Second most Frequent Agent: philip-boynton occurs 2 times in this chain.
+	 - Most Frequent Object: prion-disease occurs 6 times in this chain.
+	 - No mismatch between current script frame and most frequent agents used in script.
+	 - boynton-labs is the most frequent agent, so it must be central to intentions of actors in this chain.
+	 - Script has intention for a specific Object
+	 - AICOP's Most Frequent object was prion-disease so that is probably the correct object to use.
+
+
+----------------------------------------------------------------
+
+Another Chain: illegal-lobby-plan
+
+(     ( working-on, ( washingtion-state-legislature,additional-funding,300000,boynton-labs,, ))) 
+(     ( broke-ground, ( governor-gary-locke,boynton-labs,philip-boynton,,, ))) 
+												   ORACLE SAYS: washington-state got-research-funding
+(     ( invested, ( washington-state,250000,boynton-labs,,, ))) 
+(     ( invested, ( washington-state,250000,boynton-labs,,, ))) 
+Intention of washington-state: 
+	giving-funding-to-constituent-research-firm 
+
+META REASONER SAYS: 
+
+	 - Most Frequent Agent: washington-state occurs 2 times in this chain.
+	 - Second most Frequent Agent: governor-gary-locke occurs 1 times in this chain.
+	 - Most Frequent Object:  occurs 4 times in this chain.
+	 - No mismatch between current script frame and most frequent agents used in script.
+	 - washington-state is the most frequent agent, so it must be central to intentions of actors in this chain.
+
+
+----------------------------------------------------------------
+
+Another Chain: discontinued-investigation-plan
+
+(     ( announced-investigation, ( usfda,boynton-labs,,,, ))) 
+												   ORACLE SAYS: usfda no-investigation-possible-corruption-at-play
+(     ( discontinued-investigation, ( usfda,boynton-labs,,,, ))) 
+Intention of usfda: 
+	could-not-continue-investigation-because-government-is-controled-by 
+boynton-labs 
+
+
+META REASONER SAYS: 
+
+	 - Most Frequent Agent: usfda occurs 2 times in this chain.
+	 - Second most Frequent Agent:  occurs 0 times in this chain.
+	 - Most Frequent Object: boynton-labs occurs 2 times in this chain.
+	 - No mismatch between current script frame and most frequent agents used in script.
+	 - usfda is the most frequent agent, so it must be central to intentions of actors in this chain.
+	 - Script has intention for a specific Object
+	 - AICOP's Most Frequent object was boynton-labs so that is probably the correct object to use.
+
+
+
+
+The End! And they lived happily ever after with Drugs, Death, and Destruction!
+
+
+
+

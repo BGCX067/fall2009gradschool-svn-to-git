@@ -1,0 +1,77 @@
+Directory:
+------------------------------------------------------
+src: 
+
+To compile the compiler source code, in the "src" folder type:
+
+make
+
+to build it.
+
+"luac" is the built binary.
+
+test:
+
+Run all the test cases in the "test" folder, the following files contain tests for each optimiation:
+
+ControlFlowOpti.lua            ---   Contains code for testing 3 CFG Optis, comments describe what is tested.
+constFold+unreachRM.lua        ---   Contains code for testing constant folding and unreachable block removal
+constantProp.lua               ---   Contains code for testing constant propagation.
+cse.lua                        ---   Contains code for testing common subexpression elimination Opti.
+deadCodeElim.lua               ---   Contains code for testing dead code elimination Dataflow Opti.
+
+
+
+Team Member
+------------------------------------------------------
+Haicheng Wu
+Shriram Gurumoorthy
+Puyan Lotfi
+
+
+Implemented Optimization
+------------------------------------------------------
+Constant Folding (Shriram Gurumoorthy)
+Constant Propagation (Shriram Gurumoorthy)
+Dead Code Elimination (Shriram Gurumoorthy)
+Common Subexpression Reduction (Haicheng Wu)
+Acyclic Control Flow Optimizations (Puyan Lotfi: 3 of the 6 CFG Optis mentioned in class.)
+Unreachable Code Elimination (Puyan Lotfi, Haicheng Wu)
+Dominator + Post Dominator Analysis (Puyan Lotfi: Worked on but did not finish Loop Unrolling.)
+
+Note: We do not optimize memory opperations.
+
+
+Project 3
+------------------------------------------------------
+Based on Haicheng Wu's Project 3 program
+
+
+Limitations
+------------------------------------------------------
+1. a={} is not supported. Please initialize array in this way:
+   a={1,2}
+   b={3,4}
+   c={a,b}
+   d={{1,2},{3,4}}
+
+2. The size of the array is fixed to 256
+
+3. Type Nil is not supported in my program. So We do not support "general for" statement.
+
+4. The two operands of "and" and "or" operations should be both boolean or neither boolean. Otherwise, it is difficult to determine the result type in compiling time.
+
+5. The argument number of function call and the parameter number of function declaration should be the same.
+
+6. All number value are treated as float point value. So it might print out a lot of "0"s
+
+7. In some cases, the string length is restricted to 256 byte.
+
+8. The type of an variable cannot be changed. So, following code is illegal:
+   x = 1
+   x = "hello"
+
+9. Every expression node should have a type after type inference. So uncalled function is not allowed.
+
+10. The ll file is created in the same directory as the lua file.
+

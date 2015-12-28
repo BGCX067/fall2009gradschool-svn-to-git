@@ -1,0 +1,6 @@
+(ACPLAN(voting-machine-contract-planACPLAN-START voting-machine-contract-plan2 voting-machine-contract-plan)  (signed-contract        (BLANK          , voting-machines            ,  , , ,)))
+(ACPLAN(voting-machine-contract-plan2 voting-machine-contract-plan3            voting-machine-contract-plan)  (installed              (               , voting-machines     ,  , , ,)))
+(ACPLAN(voting-machine-contract-plan3 voting-machine-contract-plan4            voting-machine-contract-plan)  (had-problems           (voters          , voting-machines    ,  , , ,)))
+(ACPLAN(voting-machine-contract-plan4 voting-machine-contract-plan5            voting-machine-contract-plan)  (asked-to-investigate   (BLANK          , voting-machines    ,        , , ,)))
+(ACPLAN(voting-machine-contract-plan5 voting-machine-contract-plan6            voting-machine-contract-plan)  (pledged-answer         (BLANK          , voting-machines          ,        , , ,)))
+(ACPLAN(voting-machine-contract-plan6 voting-machine-contract-planACPLAN-END   voting-machine-contract-plan)  (modernize-voting-machines-for (agent          ,     voters       ,   , , ,)))

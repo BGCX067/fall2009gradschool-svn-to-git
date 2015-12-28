@@ -1,0 +1,27 @@
+one line
+next line
+"in quotes", 'in quotes'	
+a backslash inside quotes: '\'	
+a simpler way: '\'	
+<HTML>
+<HEAD>
+<TITLE>An HTML Page</TITLE>
+</HEAD>
+<BODY>
+Lua
+[[a text between double brackets]]
+</BODY>
+</HTML>
+	
+11.000000	
+10 + 1	
+-0.106000	
+helloworld	
+5.000000	
+4.000000	
+true	
+true	
+false	
+false	
+5.000000	
+10.000000	

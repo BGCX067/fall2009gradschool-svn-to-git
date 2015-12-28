@@ -1,0 +1,76 @@
+CS4240
+Project 2 README
+Team Members: Nate Barish, Puyan Lotfi, Brian Ouellette
+
+Test Cases:
+
+Our Test cases include:
+
+
+
+test.lua   test10.lua  test3.lua  test5.lua  test7.lua  test9.lua      testp.lua
+test1.lua  test2.lua   test4.lua  test6.lua  test8.lua  testempty.lua
+
+
+testp.lua should exibit a lot of stuff that does work with out compiler
+
+Should be able to run it:
+
+./luac foo.lua
+
+and get a file foo.ll
+
+then use llvm-as and lli to do the rest.
+
+
+
+Project 1 code was based off of nates code, but he basically
+rewrote most of it (except for the lex and yacc stuff) so that
+it is all in C++ and object oriented.
+
+Most of the code for AST, semantic analysis / symbol table generation,
+and IR generation lives in the AST classes. Each node knows what to do
+with it's related nodes is the main idea.
+
+We have a symbol_table class that stores maps of functions, values,
+and LLVM Value* pointers. We do a lot of traversing up and down the AST
+when expressions like functions don't immediately resolve.
+
+The type inference code infers for:
+
+- numeric for loops
+- assignments
+- function return values, UNIT if nothing is returned
+- function parameters, when the function is called
+- local variables
+- local functions
+- binary operations
+- unary operations
+
+Some bugs we have found that may or may not be fixed by submission:
+
+- printing / concating bools with strings
+- doing anything related to nil (passing to function, assigning, etc)
+- calling functions with non-string parameters that use those params for something (assigning to an number paramer for example) does not work:
+
+- assigning any value inside a function to a function parameter
+
+- bad code generated for functions that return something that are never called (they aren't called so I can't infer the return type so it is void, but we generate code anyways that returns an int or something)
+
+- break statements lead to badly generated code, lli throws an error
+- empty blocks (blocks with no code in them) lead the compiler to segfault (eg "if true then end" , or probably even "do end")
+- semantic problem: can't do arithmetic operations in functions using function parameters, thinks there is a type mismatch (of unknown to int).
+
+
+Who did what:
+  Puyan Lotfi
+	 - symbol table
+     - type inference and type checking
+  Nate Barish
+     - converted proj one to c plus plus
+     - All the llvm ir generation
+  Brian Ouellette
+     - some work on symbol table
+
+
+------ more

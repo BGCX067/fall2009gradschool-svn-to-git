@@ -1,0 +1,2 @@
+(ACPLAN(runaway-from-planACPLAN-START  runaway-from-plan8  runaway-from-plan ISSUBPLAN TRUE)  (run-away (, , , , ,)))
+(ACPLAN(runaway-from-plan8 runaway-from-planACPLAN-END     runaway-from-plan ISSUBPLAN TRUE)  (runaway  (agent , , , , ,)))

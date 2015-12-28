@@ -1,0 +1,3 @@
+(ACPLAN(fake-id-planACPLAN-START fake-id-plan2          fake-id-plan ISSUBPLAN TRUE)  (give                   (BLANK          , fake-check , BLANK , , ,)))
+(ACPLAN(fake-id-plan2 fake-id-plan3                     fake-id-plan ISSUBPLAN TRUE)  (give                   (BLANK          , fake-id    , BLANK , , ,)))
+(ACPLAN(fake-id-plan3 fake-id-planACPLAN-END            fake-id-plan ISSUBPLAN TRUE)  (fake-identity    (agent          ,            ,       , , ,)))

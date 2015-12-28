@@ -1,0 +1,41 @@
+Puyan Lotfi
+CS4240
+Homework 1 README
+Nat Clark
+
+Instructions for building and running:
+
+    gmake clean && gmake
+    ./luac foo1.lua foo2.lua
+
+    Should output to foo1.out and foo2.out.
+    
+    If no files are given to luac, then it prints out a help message.
+    
+    To run all of my tests:
+    
+    gmake run
+    
+
+
+Quirks and/or bugs:
+
+    - I have a bug where I can't process negative numbers, for in exchange I can do subtraction and
+      ignore commented lines.
+    - I kind of have comments, working. Sometimes they break, and I can't tell why at the moment.
+    - Line number detection is not exact, I basically use the linenumber of the last terminal symbol.
+    - I count commented lines in my line numbers.
+    - I am not 100% confident if my embeding of various constructs is compliant with the grader.
+    - I use to do an if statement like this: (stat 1 (if) (...) (then ...) ...). 
+    - But now I do it like the example: (stat 1 (if (...) (then ...) (else ...)
+    - In my actually grammar, I added a production for else and elseif blocks of if statements.
+    - I used a lot of polymorphism with pure virtual classes so everything just fit into one same tree 
+       type without a lot of hacks.
+    - I have some problems mixing VARARGs with other arguments in functions.
+
+Test Cases:
+
+    My test files are:
+    
+    .lua test0.lua test1.lua test2.lua test3.lua test4.lua
+    test5.lua test6.lua test7.lua test8.lua test9.lua test11.lua test10.lua

@@ -1,0 +1,4227 @@
+(chunk 12 
+	(stat 12 
+		(functioncall 12 
+			(prefixexp 12 
+				(var 12 
+					(Name 12 print)
+				)
+			)
+			(args 12 
+				(( 12 )
+				(explist 12 
+					(exp 12 
+						(Number 12 314.16e-2)
+					)
+				)
+				() 12 )
+			)
+		)
+	)
+	(stat 14 
+		(functioncall 14 
+			(prefixexp 14 
+				(var 14 
+					(Name 14 print)
+				)
+			)
+			(args 14 
+				(( 14 )
+				(explist 14 
+					(exp 14 
+						(Number 14 0.31416E1)
+					)
+				)
+				() 14 )
+			)
+		)
+	)
+	(stat 24 
+		(local 24 )
+		(function 24 )
+		(Name 24 absolute_path)
+		(funcbody 24 
+			(( 24 )
+			(parlist 24 
+				(namelist 24 
+					(Name 24 base_path)
+					(, 24 )
+					(Name 24 relative_path)
+				)
+			)
+			() 24 )
+			(block 25 
+				(chunk 25 
+					(stat 25 
+						(if 25 )
+						(binop 25 
+							(exp 25 
+								(prefixexp 25 
+									(functioncall 25 
+										(prefixexp 25 
+											(var 25 
+												(prefixexp 25 
+													(var 25 
+														(Name 25 string)
+													)
+												)
+												(. 25 )
+												(Name 25 sub)
+											)
+										)
+										(args 25 
+											(( 25 )
+											(explist 25 
+												(exp 25 
+													(prefixexp 25 
+														(var 25 
+															(Name 25 relative_path)
+														)
+													)
+												)
+												(, 25 )
+												(exp 25 
+													(Number 25 1)
+												)
+												(, 25 )
+												(exp 25 
+													(Number 25 1)
+												)
+											)
+											() 25 )
+										)
+									)
+								)
+							)
+							(== 25 )
+							(exp 25 
+								(String 25 /)
+							)
+						)
+						(then 25 )
+						(block 25 
+							(chunk 25 
+								(laststat 25 
+									(return 25 )
+									(explist 25 
+										(exp 25 
+											(prefixexp 25 
+												(var 25 
+													(Name 25 relative_path)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+						(end 25 )
+					)
+					(stat 26 
+						(local 26 )
+						(namelist 26 
+							(Name 26 path)
+						)
+						(= 26 )
+						(explist 26 
+							(exp 26 
+								(prefixexp 26 
+									(functioncall 26 
+										(prefixexp 26 
+											(var 26 
+												(prefixexp 26 
+													(var 26 
+														(Name 26 string)
+													)
+												)
+												(. 26 )
+												(Name 26 gsub)
+											)
+										)
+										(args 26 
+											(( 26 )
+											(explist 26 
+												(exp 26 
+													(prefixexp 26 
+														(var 26 
+															(Name 26 base_path)
+														)
+													)
+												)
+												(, 26 )
+												(exp 26 
+													(String 26 [^/]*$)
+												)
+												(, 26 )
+												(exp 26 
+													(String 26 )
+												)
+											)
+											() 26 )
+										)
+									)
+								)
+							)
+						)
+					)
+					(stat 27 
+						(varlist 27 
+							(var 27 
+								(Name 27 path)
+							)
+						)
+						(= 27 )
+						(explist 27 
+							(binop 27 
+								(exp 27 
+									(prefixexp 27 
+										(var 27 
+											(Name 27 path)
+										)
+									)
+								)
+								(.. 27 )
+								(exp 27 
+									(prefixexp 27 
+										(var 27 
+											(Name 27 relative_path)
+										)
+									)
+								)
+							)
+						)
+					)
+					(stat 28 
+						(varlist 28 
+							(var 28 
+								(Name 28 path)
+							)
+						)
+						(= 28 )
+						(explist 28 
+							(exp 28 
+								(prefixexp 28 
+									(functioncall 28 
+										(prefixexp 28 
+											(var 28 
+												(prefixexp 28 
+													(var 28 
+														(Name 28 string)
+													)
+												)
+												(. 28 )
+												(Name 28 gsub)
+											)
+										)
+										(args 28 
+											(( 28 )
+											(explist 28 
+												(exp 28 
+													(prefixexp 28 
+														(var 28 
+															(Name 28 path)
+														)
+													)
+												)
+												(, 28 )
+												(exp 28 
+													(String 28 ([^/]*%./))
+												)
+												(, 28 )
+												(exp 28 
+													(function 28 
+														(function 28 )
+														(funcbody 28 
+															(( 28 )
+															(parlist 28 
+																(namelist 28 
+																	(Name 28 s)
+																)
+															)
+															() 28 )
+															(block 29 
+																(chunk 29 
+																	(stat 29 
+																		(if 29 )
+																		(binop 29 
+																			(exp 29 
+																				(prefixexp 29 
+																					(var 29 
+																						(Name 29 s)
+																					)
+																				)
+																			)
+																			(~= 29 )
+																			(exp 29 
+																				(String 29 ./)
+																			)
+																		)
+																		(then 29 )
+																		(block 29 
+																			(chunk 29 
+																				(laststat 29 
+																					(return 29 )
+																					(explist 29 
+																						(exp 29 
+																							(prefixexp 29 
+																								(var 29 
+																									(Name 29 s)
+																								)
+																							)
+																						)
+																					)
+																				)
+																			)
+																		)
+																		(else 29 )
+																		(block 29 
+																			(chunk 29 
+																				(laststat 29 
+																					(return 29 )
+																					(explist 29 
+																						(exp 29 
+																							(String 29 )
+																						)
+																					)
+																				)
+																			)
+																		)
+																		(end 29 )
+																	)
+																)
+															)
+															(end 30 )
+														)
+													)
+												)
+											)
+											() 30 )
+										)
+									)
+								)
+							)
+						)
+					)
+					(stat 31 
+						(varlist 31 
+							(var 31 
+								(Name 31 path)
+							)
+						)
+						(= 31 )
+						(explist 31 
+							(exp 31 
+								(prefixexp 31 
+									(functioncall 31 
+										(prefixexp 31 
+											(var 31 
+												(prefixexp 31 
+													(var 31 
+														(Name 31 string)
+													)
+												)
+												(. 31 )
+												(Name 31 gsub)
+											)
+										)
+										(args 31 
+											(( 31 )
+											(explist 31 
+												(exp 31 
+													(prefixexp 31 
+														(var 31 
+															(Name 31 path)
+														)
+													)
+												)
+												(, 31 )
+												(exp 31 
+													(String 31 /%.$)
+												)
+												(, 31 )
+												(exp 31 
+													(String 31 /)
+												)
+											)
+											() 31 )
+										)
+									)
+								)
+							)
+						)
+					)
+					(stat 32 
+						(local 32 )
+						(namelist 32 
+							(Name 32 reduced)
+						)
+					)
+					(stat 33 
+						(while 33 )
+						(binop 33 
+							(exp 33 
+								(prefixexp 33 
+									(var 33 
+										(Name 33 reduced)
+									)
+								)
+							)
+							(~= 33 )
+							(exp 33 
+								(prefixexp 33 
+									(var 33 
+										(Name 33 path)
+									)
+								)
+							)
+						)
+						(do 33 )
+						(block 34 
+							(chunk 34 
+								(stat 34 
+									(varlist 34 
+										(var 34 
+											(Name 34 reduced)
+										)
+									)
+									(= 34 )
+									(explist 34 
+										(exp 34 
+											(prefixexp 34 
+												(var 34 
+													(Name 34 path)
+												)
+											)
+										)
+									)
+								)
+								(stat 35 
+									(varlist 35 
+										(var 35 
+											(Name 35 path)
+										)
+									)
+									(= 35 )
+									(explist 35 
+										(exp 35 
+											(prefixexp 35 
+												(functioncall 35 
+													(prefixexp 35 
+														(var 35 
+															(prefixexp 35 
+																(var 35 
+																	(Name 35 string)
+																)
+															)
+															(. 35 )
+															(Name 35 gsub)
+														)
+													)
+													(args 35 
+														(( 35 )
+														(explist 35 
+															(exp 35 
+																(prefixexp 35 
+																	(var 35 
+																		(Name 35 reduced)
+																	)
+																)
+															)
+															(, 35 )
+															(exp 35 
+																(String 35 ([^/]*/%.%./))
+															)
+															(, 35 )
+															(exp 35 
+																(function 35 
+																	(function 35 )
+																	(funcbody 35 
+																		(( 35 )
+																		(parlist 35 
+																			(namelist 35 
+																				(Name 35 s)
+																			)
+																		)
+																		() 35 )
+																		(block 36 
+																			(chunk 36 
+																				(stat 36 
+																					(if 36 )
+																					(binop 36 
+																						(exp 36 
+																							(prefixexp 36 
+																								(var 36 
+																									(Name 36 s)
+																								)
+																							)
+																						)
+																						(~= 36 )
+																						(exp 36 
+																							(String 36 ../../)
+																						)
+																					)
+																					(then 36 )
+																					(block 36 
+																						(chunk 36 
+																							(laststat 36 
+																								(return 36 )
+																								(explist 36 
+																									(exp 36 
+																										(String 36 )
+																									)
+																								)
+																							)
+																						)
+																					)
+																					(else 36 )
+																					(block 36 
+																						(chunk 36 
+																							(laststat 36 
+																								(return 36 )
+																								(explist 36 
+																									(exp 36 
+																										(prefixexp 36 
+																											(var 36 
+																												(Name 36 s)
+																											)
+																										)
+																									)
+																								)
+																							)
+																						)
+																					)
+																					(end 36 )
+																				)
+																			)
+																		)
+																		(end 37 )
+																	)
+																)
+															)
+														)
+														() 37 )
+													)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+						(end 38 )
+					)
+					(stat 39 
+						(varlist 39 
+							(var 39 
+								(Name 39 path)
+							)
+						)
+						(= 39 )
+						(explist 39 
+							(exp 39 
+								(prefixexp 39 
+									(functioncall 39 
+										(prefixexp 39 
+											(var 39 
+												(prefixexp 39 
+													(var 39 
+														(Name 39 string)
+													)
+												)
+												(. 39 )
+												(Name 39 gsub)
+											)
+										)
+										(args 39 
+											(( 39 )
+											(explist 39 
+												(exp 39 
+													(prefixexp 39 
+														(var 39 
+															(Name 39 reduced)
+														)
+													)
+												)
+												(, 39 )
+												(exp 39 
+													(String 39 ([^/]*/%.%.)$)
+												)
+												(, 39 )
+												(exp 39 
+													(function 39 
+														(function 39 )
+														(funcbody 39 
+															(( 39 )
+															(parlist 39 
+																(namelist 39 
+																	(Name 39 s)
+																)
+															)
+															() 39 )
+															(block 40 
+																(chunk 40 
+																	(stat 40 
+																		(if 40 )
+																		(binop 40 
+																			(exp 40 
+																				(prefixexp 40 
+																					(var 40 
+																						(Name 40 s)
+																					)
+																				)
+																			)
+																			(~= 40 )
+																			(exp 40 
+																				(String 40 ../..)
+																			)
+																		)
+																		(then 40 )
+																		(block 40 
+																			(chunk 40 
+																				(laststat 40 
+																					(return 40 )
+																					(explist 40 
+																						(exp 40 
+																							(String 40 )
+																						)
+																					)
+																				)
+																			)
+																		)
+																		(else 40 )
+																		(block 40 
+																			(chunk 40 
+																				(laststat 40 
+																					(return 40 )
+																					(explist 40 
+																						(exp 40 
+																							(prefixexp 40 
+																								(var 40 
+																									(Name 40 s)
+																								)
+																							)
+																						)
+																					)
+																				)
+																			)
+																		)
+																		(end 40 )
+																	)
+																)
+															)
+															(end 41 )
+														)
+													)
+												)
+											)
+											() 41 )
+										)
+									)
+								)
+							)
+						)
+					)
+					(laststat 42 
+						(return 42 )
+						(explist 42 
+							(exp 42 
+								(prefixexp 42 
+									(var 42 
+										(Name 42 path)
+									)
+								)
+							)
+						)
+					)
+				)
+			)
+			(end 43 )
+		)
+	)
+	(stat 63 
+		(function 63 )
+		(funcname 63 
+			(Name 63 parse)
+		)
+		(funcbody 63 
+			(( 63 )
+			(parlist 63 
+				(namelist 63 
+					(Name 63 url)
+					(, 63 )
+					(Name 63 default)
+				)
+			)
+			() 63 )
+			(block 65 
+				(chunk 65 
+					(stat 65 
+						(local 65 )
+						(namelist 65 
+							(Name 65 parsed)
+						)
+						(= 65 )
+						(explist 65 
+							(exp 65 
+								(tableconstructor 65 
+									({ 65 )
+									(} 65 )
+								)
+							)
+						)
+					)
+					(stat 66 
+						(for 66 )
+						(namelist 66 
+							(Name 66 i)
+							(, 66 )
+							(Name 66 v)
+						)
+						(in 66 )
+						(explist 66 
+							(exp 66 
+								(prefixexp 66 
+									(functioncall 66 
+										(prefixexp 66 
+											(var 66 
+												(prefixexp 66 
+													(var 66 
+														(Name 66 base)
+													)
+												)
+												(. 66 )
+												(Name 66 pairs)
+											)
+										)
+										(args 66 
+											(( 66 )
+											(explist 66 
+												(binop 66 
+													(exp 66 
+														(prefixexp 66 
+															(var 66 
+																(Name 66 default)
+															)
+														)
+													)
+													(or 66 )
+													(exp 66 
+														(prefixexp 66 
+															(var 66 
+																(Name 66 parsed)
+															)
+														)
+													)
+												)
+											)
+											() 66 )
+										)
+									)
+								)
+							)
+						)
+						(do 66 )
+						(block 66 
+							(chunk 66 
+								(stat 66 
+									(varlist 66 
+										(var 66 
+											(prefixexp 66 
+												(var 66 
+													(Name 66 parsed)
+												)
+											)
+											([ 66 )
+											(exp 66 
+												(prefixexp 66 
+													(var 66 
+														(Name 66 i)
+													)
+												)
+											)
+											(] 66 )
+										)
+									)
+									(= 66 )
+									(explist 66 
+										(exp 66 
+											(prefixexp 66 
+												(var 66 
+													(Name 66 v)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+						(end 66 )
+					)
+					(stat 68 
+						(if 68 )
+						(unop 68 
+							(not 68 )
+							(binop 68 
+								(exp 68 
+									(prefixexp 68 
+										(var 68 
+											(Name 68 url)
+										)
+									)
+								)
+								(or 68 )
+								(binop 68 
+									(exp 68 
+										(prefixexp 68 
+											(var 68 
+												(Name 68 url)
+											)
+										)
+									)
+									(== 68 )
+									(exp 68 
+										(String 68 )
+									)
+								)
+							)
+						)
+						(then 68 )
+						(block 68 
+							(chunk 68 
+								(laststat 68 
+									(return 68 )
+									(explist 68 
+										(exp 68 
+											(nil 68 )
+										)
+										(, 68 )
+										(exp 68 
+											(String 68 invalid url)
+										)
+									)
+								)
+							)
+						)
+						(end 68 )
+					)
+					(stat 72 
+						(varlist 72 
+							(var 72 
+								(Name 72 url)
+							)
+						)
+						(= 72 )
+						(explist 72 
+							(exp 72 
+								(prefixexp 72 
+									(functioncall 72 
+										(prefixexp 72 
+											(var 72 
+												(prefixexp 72 
+													(var 72 
+														(Name 72 string)
+													)
+												)
+												(. 72 )
+												(Name 72 gsub)
+											)
+										)
+										(args 72 
+											(( 72 )
+											(explist 72 
+												(exp 72 
+													(prefixexp 72 
+														(var 72 
+															(Name 72 url)
+														)
+													)
+												)
+												(, 72 )
+												(exp 72 
+													(String 72 #(.*)$)
+												)
+												(, 72 )
+												(exp 72 
+													(function 72 
+														(function 72 )
+														(funcbody 72 
+															(( 72 )
+															(parlist 72 
+																(namelist 72 
+																	(Name 72 f)
+																)
+															)
+															() 72 )
+															(block 73 
+																(chunk 73 
+																	(stat 73 
+																		(varlist 73 
+																			(var 73 
+																				(prefixexp 73 
+																					(var 73 
+																						(Name 73 parsed)
+																					)
+																				)
+																				(. 73 )
+																				(Name 73 fragment)
+																			)
+																		)
+																		(= 73 )
+																		(explist 73 
+																			(exp 73 
+																				(prefixexp 73 
+																					(var 73 
+																						(Name 73 f)
+																					)
+																				)
+																			)
+																		)
+																	)
+																	(laststat 74 
+																		(return 74 )
+																		(explist 74 
+																			(exp 74 
+																				(String 74 )
+																			)
+																		)
+																	)
+																)
+															)
+															(end 75 )
+														)
+													)
+												)
+											)
+											() 75 )
+										)
+									)
+								)
+							)
+						)
+					)
+					(stat 77 
+						(varlist 77 
+							(var 77 
+								(Name 77 url)
+							)
+						)
+						(= 77 )
+						(explist 77 
+							(exp 77 
+								(prefixexp 77 
+									(functioncall 77 
+										(prefixexp 77 
+											(var 77 
+												(prefixexp 77 
+													(var 77 
+														(Name 77 string)
+													)
+												)
+												(. 77 )
+												(Name 77 gsub)
+											)
+										)
+										(args 77 
+											(( 77 )
+											(explist 77 
+												(exp 77 
+													(prefixexp 77 
+														(var 77 
+															(Name 77 url)
+														)
+													)
+												)
+												(, 77 )
+												(exp 77 
+													(String 77 ^([%w][%w%+%-%.]*)%:)
+												)
+												(, 77 )
+												(exp 78 
+													(function 78 
+														(function 78 )
+														(funcbody 78 
+															(( 78 )
+															(parlist 78 
+																(namelist 78 
+																	(Name 78 s)
+																)
+															)
+															() 78 )
+															(block 78 
+																(chunk 78 
+																	(stat 78 
+																		(varlist 78 
+																			(var 78 
+																				(prefixexp 78 
+																					(var 78 
+																						(Name 78 parsed)
+																					)
+																				)
+																				(. 78 )
+																				(Name 78 scheme)
+																			)
+																		)
+																		(= 78 )
+																		(explist 78 
+																			(exp 78 
+																				(prefixexp 78 
+																					(var 78 
+																						(Name 78 s)
+																					)
+																				)
+																			)
+																		)
+																	)
+																	(laststat 78 
+																		(return 78 )
+																		(explist 78 
+																			(exp 78 
+																				(String 78 )
+																			)
+																		)
+																	)
+																)
+															)
+															(end 78 )
+														)
+													)
+												)
+											)
+											() 78 )
+										)
+									)
+								)
+							)
+						)
+					)
+					(stat 80 
+						(varlist 80 
+							(var 80 
+								(Name 80 url)
+							)
+						)
+						(= 80 )
+						(explist 80 
+							(exp 80 
+								(prefixexp 80 
+									(functioncall 80 
+										(prefixexp 80 
+											(var 80 
+												(prefixexp 80 
+													(var 80 
+														(Name 80 string)
+													)
+												)
+												(. 80 )
+												(Name 80 gsub)
+											)
+										)
+										(args 80 
+											(( 80 )
+											(explist 80 
+												(exp 80 
+													(prefixexp 80 
+														(var 80 
+															(Name 80 url)
+														)
+													)
+												)
+												(, 80 )
+												(exp 80 
+													(String 80 ^//([^/]*))
+												)
+												(, 80 )
+												(exp 80 
+													(function 80 
+														(function 80 )
+														(funcbody 80 
+															(( 80 )
+															(parlist 80 
+																(namelist 80 
+																	(Name 80 n)
+																)
+															)
+															() 80 )
+															(block 81 
+																(chunk 81 
+																	(stat 81 
+																		(varlist 81 
+																			(var 81 
+																				(prefixexp 81 
+																					(var 81 
+																						(Name 81 parsed)
+																					)
+																				)
+																				(. 81 )
+																				(Name 81 authority)
+																			)
+																		)
+																		(= 81 )
+																		(explist 81 
+																			(exp 81 
+																				(prefixexp 81 
+																					(var 81 
+																						(Name 81 n)
+																					)
+																				)
+																			)
+																		)
+																	)
+																	(laststat 82 
+																		(return 82 )
+																		(explist 82 
+																			(exp 82 
+																				(String 82 )
+																			)
+																		)
+																	)
+																)
+															)
+															(end 83 )
+														)
+													)
+												)
+											)
+											() 83 )
+										)
+									)
+								)
+							)
+						)
+					)
+					(stat 85 
+						(varlist 85 
+							(var 85 
+								(Name 85 url)
+							)
+						)
+						(= 85 )
+						(explist 85 
+							(exp 85 
+								(prefixexp 85 
+									(functioncall 85 
+										(prefixexp 85 
+											(var 85 
+												(prefixexp 85 
+													(var 85 
+														(Name 85 string)
+													)
+												)
+												(. 85 )
+												(Name 85 gsub)
+											)
+										)
+										(args 85 
+											(( 85 )
+											(explist 85 
+												(exp 85 
+													(prefixexp 85 
+														(var 85 
+															(Name 85 url)
+														)
+													)
+												)
+												(, 85 )
+												(exp 85 
+													(String 85 %?(.*))
+												)
+												(, 85 )
+												(exp 85 
+													(function 85 
+														(function 85 )
+														(funcbody 85 
+															(( 85 )
+															(parlist 85 
+																(namelist 85 
+																	(Name 85 q)
+																)
+															)
+															() 85 )
+															(block 86 
+																(chunk 86 
+																	(stat 86 
+																		(varlist 86 
+																			(var 86 
+																				(prefixexp 86 
+																					(var 86 
+																						(Name 86 parsed)
+																					)
+																				)
+																				(. 86 )
+																				(Name 86 query)
+																			)
+																		)
+																		(= 86 )
+																		(explist 86 
+																			(exp 86 
+																				(prefixexp 86 
+																					(var 86 
+																						(Name 86 q)
+																					)
+																				)
+																			)
+																		)
+																	)
+																	(laststat 87 
+																		(return 87 )
+																		(explist 87 
+																			(exp 87 
+																				(String 87 )
+																			)
+																		)
+																	)
+																)
+															)
+															(end 88 )
+														)
+													)
+												)
+											)
+											() 88 )
+										)
+									)
+								)
+							)
+						)
+					)
+					(stat 90 
+						(varlist 90 
+							(var 90 
+								(Name 90 url)
+							)
+						)
+						(= 90 )
+						(explist 90 
+							(exp 90 
+								(prefixexp 90 
+									(functioncall 90 
+										(prefixexp 90 
+											(var 90 
+												(prefixexp 90 
+													(var 90 
+														(Name 90 string)
+													)
+												)
+												(. 90 )
+												(Name 90 gsub)
+											)
+										)
+										(args 90 
+											(( 90 )
+											(explist 90 
+												(exp 90 
+													(prefixexp 90 
+														(var 90 
+															(Name 90 url)
+														)
+													)
+												)
+												(, 90 )
+												(exp 90 
+													(String 90 %;(.*))
+												)
+												(, 90 )
+												(exp 90 
+													(function 90 
+														(function 90 )
+														(funcbody 90 
+															(( 90 )
+															(parlist 90 
+																(namelist 90 
+																	(Name 90 p)
+																)
+															)
+															() 90 )
+															(block 91 
+																(chunk 91 
+																	(stat 91 
+																		(varlist 91 
+																			(var 91 
+																				(prefixexp 91 
+																					(var 91 
+																						(Name 91 parsed)
+																					)
+																				)
+																				(. 91 )
+																				(Name 91 params)
+																			)
+																		)
+																		(= 91 )
+																		(explist 91 
+																			(exp 91 
+																				(prefixexp 91 
+																					(var 91 
+																						(Name 91 p)
+																					)
+																				)
+																			)
+																		)
+																	)
+																	(laststat 92 
+																		(return 92 )
+																		(explist 92 
+																			(exp 92 
+																				(String 92 )
+																			)
+																		)
+																	)
+																)
+															)
+															(end 93 )
+														)
+													)
+												)
+											)
+											() 93 )
+										)
+									)
+								)
+							)
+						)
+					)
+					(stat 95 
+						(if 95 )
+						(binop 95 
+							(exp 95 
+								(prefixexp 95 
+									(var 95 
+										(Name 95 url)
+									)
+								)
+							)
+							(~= 95 )
+							(exp 95 
+								(String 95 )
+							)
+						)
+						(then 95 )
+						(block 95 
+							(chunk 95 
+								(stat 95 
+									(varlist 95 
+										(var 95 
+											(prefixexp 95 
+												(var 95 
+													(Name 95 parsed)
+												)
+											)
+											(. 95 )
+											(Name 95 path)
+										)
+									)
+									(= 95 )
+									(explist 95 
+										(exp 95 
+											(prefixexp 95 
+												(var 95 
+													(Name 95 url)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+						(end 95 )
+					)
+					(stat 96 
+						(local 96 )
+						(namelist 96 
+							(Name 96 authority)
+						)
+						(= 96 )
+						(explist 96 
+							(exp 96 
+								(prefixexp 96 
+									(var 96 
+										(prefixexp 96 
+											(var 96 
+												(Name 96 parsed)
+											)
+										)
+										(. 96 )
+										(Name 96 authority)
+									)
+								)
+							)
+						)
+					)
+					(stat 97 
+						(if 97 )
+						(unop 97 
+							(not 97 )
+							(exp 97 
+								(prefixexp 97 
+									(var 97 
+										(Name 97 authority)
+									)
+								)
+							)
+						)
+						(then 97 )
+						(block 97 
+							(chunk 97 
+								(laststat 97 
+									(return 97 )
+									(explist 97 
+										(exp 97 
+											(prefixexp 97 
+												(var 97 
+													(Name 97 parsed)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+						(end 97 )
+					)
+					(stat 98 
+						(varlist 98 
+							(var 98 
+								(Name 98 authority)
+							)
+						)
+						(= 98 )
+						(explist 98 
+							(exp 98 
+								(prefixexp 98 
+									(functioncall 98 
+										(prefixexp 98 
+											(var 98 
+												(prefixexp 98 
+													(var 98 
+														(Name 98 string)
+													)
+												)
+												(. 98 )
+												(Name 98 gsub)
+											)
+										)
+										(args 98 
+											(( 98 )
+											(explist 98 
+												(exp 98 
+													(prefixexp 98 
+														(var 98 
+															(Name 98 authority)
+														)
+													)
+												)
+												(, 98 )
+												(exp 98 
+													(String 98 ^([^@]*)@)
+												)
+												(, 98 )
+												(exp 99 
+													(function 99 
+														(function 99 )
+														(funcbody 99 
+															(( 99 )
+															(parlist 99 
+																(namelist 99 
+																	(Name 99 u)
+																)
+															)
+															() 99 )
+															(block 99 
+																(chunk 99 
+																	(stat 99 
+																		(varlist 99 
+																			(var 99 
+																				(prefixexp 99 
+																					(var 99 
+																						(Name 99 parsed)
+																					)
+																				)
+																				(. 99 )
+																				(Name 99 userinfo)
+																			)
+																		)
+																		(= 99 )
+																		(explist 99 
+																			(exp 99 
+																				(prefixexp 99 
+																					(var 99 
+																						(Name 99 u)
+																					)
+																				)
+																			)
+																		)
+																	)
+																	(laststat 99 
+																		(return 99 )
+																		(explist 99 
+																			(exp 99 
+																				(String 99 )
+																			)
+																		)
+																	)
+																)
+															)
+															(end 99 )
+														)
+													)
+												)
+											)
+											() 99 )
+										)
+									)
+								)
+							)
+						)
+					)
+					(stat 100 
+						(varlist 100 
+							(var 100 
+								(Name 100 authority)
+							)
+						)
+						(= 100 )
+						(explist 100 
+							(exp 100 
+								(prefixexp 100 
+									(functioncall 100 
+										(prefixexp 100 
+											(var 100 
+												(prefixexp 100 
+													(var 100 
+														(Name 100 string)
+													)
+												)
+												(. 100 )
+												(Name 100 gsub)
+											)
+										)
+										(args 100 
+											(( 100 )
+											(explist 100 
+												(exp 100 
+													(prefixexp 100 
+														(var 100 
+															(Name 100 authority)
+														)
+													)
+												)
+												(, 100 )
+												(exp 100 
+													(String 100 :([^:]*)$)
+												)
+												(, 100 )
+												(exp 101 
+													(function 101 
+														(function 101 )
+														(funcbody 101 
+															(( 101 )
+															(parlist 101 
+																(namelist 101 
+																	(Name 101 p)
+																)
+															)
+															() 101 )
+															(block 101 
+																(chunk 101 
+																	(stat 101 
+																		(varlist 101 
+																			(var 101 
+																				(prefixexp 101 
+																					(var 101 
+																						(Name 101 parsed)
+																					)
+																				)
+																				(. 101 )
+																				(Name 101 port)
+																			)
+																		)
+																		(= 101 )
+																		(explist 101 
+																			(exp 101 
+																				(prefixexp 101 
+																					(var 101 
+																						(Name 101 p)
+																					)
+																				)
+																			)
+																		)
+																	)
+																	(laststat 101 
+																		(return 101 )
+																		(explist 101 
+																			(exp 101 
+																				(String 101 )
+																			)
+																		)
+																	)
+																)
+															)
+															(end 101 )
+														)
+													)
+												)
+											)
+											() 101 )
+										)
+									)
+								)
+							)
+						)
+					)
+					(stat 102 
+						(if 102 )
+						(binop 102 
+							(exp 102 
+								(prefixexp 102 
+									(var 102 
+										(Name 102 authority)
+									)
+								)
+							)
+							(~= 102 )
+							(exp 102 
+								(String 102 )
+							)
+						)
+						(then 102 )
+						(block 102 
+							(chunk 102 
+								(stat 102 
+									(varlist 102 
+										(var 102 
+											(prefixexp 102 
+												(var 102 
+													(Name 102 parsed)
+												)
+											)
+											(. 102 )
+											(Name 102 host)
+										)
+									)
+									(= 102 )
+									(explist 102 
+										(exp 102 
+											(prefixexp 102 
+												(var 102 
+													(Name 102 authority)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+						(end 102 )
+					)
+					(stat 103 
+						(local 103 )
+						(namelist 103 
+							(Name 103 userinfo)
+						)
+						(= 103 )
+						(explist 103 
+							(exp 103 
+								(prefixexp 103 
+									(var 103 
+										(prefixexp 103 
+											(var 103 
+												(Name 103 parsed)
+											)
+										)
+										(. 103 )
+										(Name 103 userinfo)
+									)
+								)
+							)
+						)
+					)
+					(stat 104 
+						(if 104 )
+						(unop 104 
+							(not 104 )
+							(exp 104 
+								(prefixexp 104 
+									(var 104 
+										(Name 104 userinfo)
+									)
+								)
+							)
+						)
+						(then 104 )
+						(block 104 
+							(chunk 104 
+								(laststat 104 
+									(return 104 )
+									(explist 104 
+										(exp 104 
+											(prefixexp 104 
+												(var 104 
+													(Name 104 parsed)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+						(end 104 )
+					)
+					(stat 105 
+						(varlist 105 
+							(var 105 
+								(Name 105 userinfo)
+							)
+						)
+						(= 105 )
+						(explist 105 
+							(exp 105 
+								(prefixexp 105 
+									(functioncall 105 
+										(prefixexp 105 
+											(var 105 
+												(prefixexp 105 
+													(var 105 
+														(Name 105 string)
+													)
+												)
+												(. 105 )
+												(Name 105 gsub)
+											)
+										)
+										(args 105 
+											(( 105 )
+											(explist 105 
+												(exp 105 
+													(prefixexp 105 
+														(var 105 
+															(Name 105 userinfo)
+														)
+													)
+												)
+												(, 105 )
+												(exp 105 
+													(String 105 :([^:]*)$)
+												)
+												(, 105 )
+												(exp 106 
+													(function 106 
+														(function 106 )
+														(funcbody 106 
+															(( 106 )
+															(parlist 106 
+																(namelist 106 
+																	(Name 106 p)
+																)
+															)
+															() 106 )
+															(block 106 
+																(chunk 106 
+																	(stat 106 
+																		(varlist 106 
+																			(var 106 
+																				(prefixexp 106 
+																					(var 106 
+																						(Name 106 parsed)
+																					)
+																				)
+																				(. 106 )
+																				(Name 106 password)
+																			)
+																		)
+																		(= 106 )
+																		(explist 106 
+																			(exp 106 
+																				(prefixexp 106 
+																					(var 106 
+																						(Name 106 p)
+																					)
+																				)
+																			)
+																		)
+																	)
+																	(laststat 106 
+																		(return 106 )
+																		(explist 106 
+																			(exp 106 
+																				(String 106 )
+																			)
+																		)
+																	)
+																)
+															)
+															(end 106 )
+														)
+													)
+												)
+											)
+											() 106 )
+										)
+									)
+								)
+							)
+						)
+					)
+					(stat 107 
+						(varlist 107 
+							(var 107 
+								(prefixexp 107 
+									(var 107 
+										(Name 107 parsed)
+									)
+								)
+								(. 107 )
+								(Name 107 user)
+							)
+						)
+						(= 107 )
+						(explist 107 
+							(exp 107 
+								(prefixexp 107 
+									(var 107 
+										(Name 107 userinfo)
+									)
+								)
+							)
+						)
+					)
+					(laststat 108 
+						(return 108 )
+						(explist 108 
+							(exp 108 
+								(prefixexp 108 
+									(var 108 
+										(Name 108 parsed)
+									)
+								)
+							)
+						)
+					)
+				)
+			)
+			(end 109 )
+		)
+	)
+	(stat 119 
+		(function 119 )
+		(funcname 119 
+			(Name 119 build)
+		)
+		(funcbody 119 
+			(( 119 )
+			(parlist 119 
+				(namelist 119 
+					(Name 119 parsed)
+				)
+			)
+			() 119 )
+			(block 120 
+				(chunk 120 
+					(stat 120 
+						(local 120 )
+						(namelist 120 
+							(Name 120 ppath)
+						)
+						(= 120 )
+						(explist 120 
+							(exp 120 
+								(prefixexp 120 
+									(functioncall 120 
+										(prefixexp 120 
+											(var 120 
+												(Name 120 parse_path)
+											)
+										)
+										(args 120 
+											(( 120 )
+											(explist 120 
+												(binop 120 
+													(exp 120 
+														(prefixexp 120 
+															(var 120 
+																(prefixexp 120 
+																	(var 120 
+																		(Name 120 parsed)
+																	)
+																)
+																(. 120 )
+																(Name 120 path)
+															)
+														)
+													)
+													(or 120 )
+													(exp 120 
+														(String 120 )
+													)
+												)
+											)
+											() 120 )
+										)
+									)
+								)
+							)
+						)
+					)
+					(stat 121 
+						(local 121 )
+						(namelist 121 
+							(Name 121 url)
+						)
+						(= 121 )
+						(explist 121 
+							(exp 121 
+								(prefixexp 121 
+									(functioncall 121 
+										(prefixexp 121 
+											(var 121 
+												(Name 121 build_path)
+											)
+										)
+										(args 121 
+											(( 121 )
+											(explist 121 
+												(exp 121 
+													(prefixexp 121 
+														(var 121 
+															(Name 121 ppath)
+														)
+													)
+												)
+											)
+											() 121 )
+										)
+									)
+								)
+							)
+						)
+					)
+					(stat 122 
+						(if 122 )
+						(exp 122 
+							(prefixexp 122 
+								(var 122 
+									(prefixexp 122 
+										(var 122 
+											(Name 122 parsed)
+										)
+									)
+									(. 122 )
+									(Name 122 params)
+								)
+							)
+						)
+						(then 122 )
+						(block 122 
+							(chunk 122 
+								(stat 122 
+									(varlist 122 
+										(var 122 
+											(Name 122 url)
+										)
+									)
+									(= 122 )
+									(explist 122 
+										(binop 122 
+											(exp 122 
+												(prefixexp 122 
+													(var 122 
+														(Name 122 url)
+													)
+												)
+											)
+											(.. 122 )
+											(binop 122 
+												(exp 122 
+													(String 122 ;)
+												)
+												(.. 122 )
+												(exp 122 
+													(prefixexp 122 
+														(var 122 
+															(prefixexp 122 
+																(var 122 
+																	(Name 122 parsed)
+																)
+															)
+															(. 122 )
+															(Name 122 params)
+														)
+													)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+						(end 122 )
+					)
+					(stat 123 
+						(if 123 )
+						(exp 123 
+							(prefixexp 123 
+								(var 123 
+									(prefixexp 123 
+										(var 123 
+											(Name 123 parsed)
+										)
+									)
+									(. 123 )
+									(Name 123 query)
+								)
+							)
+						)
+						(then 123 )
+						(block 123 
+							(chunk 123 
+								(stat 123 
+									(varlist 123 
+										(var 123 
+											(Name 123 url)
+										)
+									)
+									(= 123 )
+									(explist 123 
+										(binop 123 
+											(exp 123 
+												(prefixexp 123 
+													(var 123 
+														(Name 123 url)
+													)
+												)
+											)
+											(.. 123 )
+											(binop 123 
+												(exp 123 
+													(String 123 ?)
+												)
+												(.. 123 )
+												(exp 123 
+													(prefixexp 123 
+														(var 123 
+															(prefixexp 123 
+																(var 123 
+																	(Name 123 parsed)
+																)
+															)
+															(. 123 )
+															(Name 123 query)
+														)
+													)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+						(end 123 )
+					)
+					(stat 124 
+						(local 124 )
+						(namelist 124 
+							(Name 124 authority)
+						)
+						(= 124 )
+						(explist 124 
+							(exp 124 
+								(prefixexp 124 
+									(var 124 
+										(prefixexp 124 
+											(var 124 
+												(Name 124 parsed)
+											)
+										)
+										(. 124 )
+										(Name 124 authority)
+									)
+								)
+							)
+						)
+					)
+					(stat 125 
+						(if 125 )
+						(exp 125 
+							(prefixexp 125 
+								(var 125 
+									(prefixexp 125 
+										(var 125 
+											(Name 125 parsed)
+										)
+									)
+									(. 125 )
+									(Name 125 host)
+								)
+							)
+						)
+						(then 125 )
+						(block 126 
+							(chunk 126 
+								(stat 126 
+									(varlist 126 
+										(var 126 
+											(Name 126 authority)
+										)
+									)
+									(= 126 )
+									(explist 126 
+										(exp 126 
+											(prefixexp 126 
+												(var 126 
+													(prefixexp 126 
+														(var 126 
+															(Name 126 parsed)
+														)
+													)
+													(. 126 )
+													(Name 126 host)
+												)
+											)
+										)
+									)
+								)
+								(stat 127 
+									(if 127 )
+									(exp 127 
+										(prefixexp 127 
+											(var 127 
+												(prefixexp 127 
+													(var 127 
+														(Name 127 parsed)
+													)
+												)
+												(. 127 )
+												(Name 127 port)
+											)
+										)
+									)
+									(then 127 )
+									(block 127 
+										(chunk 127 
+											(stat 127 
+												(varlist 127 
+													(var 127 
+														(Name 127 authority)
+													)
+												)
+												(= 127 )
+												(explist 127 
+													(binop 127 
+														(exp 127 
+															(prefixexp 127 
+																(var 127 
+																	(Name 127 authority)
+																)
+															)
+														)
+														(.. 127 )
+														(binop 127 
+															(exp 127 
+																(String 127 :)
+															)
+															(.. 127 )
+															(exp 127 
+																(prefixexp 127 
+																	(var 127 
+																		(prefixexp 127 
+																			(var 127 
+																				(Name 127 parsed)
+																			)
+																		)
+																		(. 127 )
+																		(Name 127 port)
+																	)
+																)
+															)
+														)
+													)
+												)
+											)
+										)
+									)
+									(end 127 )
+								)
+								(stat 128 
+									(local 128 )
+									(namelist 128 
+										(Name 128 userinfo)
+									)
+									(= 128 )
+									(explist 128 
+										(exp 128 
+											(prefixexp 128 
+												(var 128 
+													(prefixexp 128 
+														(var 128 
+															(Name 128 parsed)
+														)
+													)
+													(. 128 )
+													(Name 128 userinfo)
+												)
+											)
+										)
+									)
+								)
+								(stat 129 
+									(if 129 )
+									(exp 129 
+										(prefixexp 129 
+											(var 129 
+												(prefixexp 129 
+													(var 129 
+														(Name 129 parsed)
+													)
+												)
+												(. 129 )
+												(Name 129 user)
+											)
+										)
+									)
+									(then 129 )
+									(block 130 
+										(chunk 130 
+											(stat 130 
+												(varlist 130 
+													(var 130 
+														(Name 130 userinfo)
+													)
+												)
+												(= 130 )
+												(explist 130 
+													(exp 130 
+														(prefixexp 130 
+															(var 130 
+																(prefixexp 130 
+																	(var 130 
+																		(Name 130 parsed)
+																	)
+																)
+																(. 130 )
+																(Name 130 user)
+															)
+														)
+													)
+												)
+											)
+											(stat 131 
+												(if 131 )
+												(exp 131 
+													(prefixexp 131 
+														(var 131 
+															(prefixexp 131 
+																(var 131 
+																	(Name 131 parsed)
+																)
+															)
+															(. 131 )
+															(Name 131 password)
+														)
+													)
+												)
+												(then 131 )
+												(block 132 
+													(chunk 132 
+														(stat 132 
+															(varlist 132 
+																(var 132 
+																	(Name 132 userinfo)
+																)
+															)
+															(= 132 )
+															(explist 132 
+																(binop 132 
+																	(exp 132 
+																		(prefixexp 132 
+																			(var 132 
+																				(Name 132 userinfo)
+																			)
+																		)
+																	)
+																	(.. 132 )
+																	(binop 132 
+																		(exp 132 
+																			(String 132 :)
+																		)
+																		(.. 132 )
+																		(exp 132 
+																			(prefixexp 132 
+																				(var 132 
+																					(prefixexp 132 
+																						(var 132 
+																							(Name 132 parsed)
+																						)
+																					)
+																					(. 132 )
+																					(Name 132 password)
+																				)
+																			)
+																		)
+																	)
+																)
+															)
+														)
+													)
+												)
+												(end 133 )
+											)
+										)
+									)
+									(end 134 )
+								)
+								(stat 135 
+									(if 135 )
+									(exp 135 
+										(prefixexp 135 
+											(var 135 
+												(Name 135 userinfo)
+											)
+										)
+									)
+									(then 135 )
+									(block 135 
+										(chunk 135 
+											(stat 135 
+												(varlist 135 
+													(var 135 
+														(Name 135 authority)
+													)
+												)
+												(= 135 )
+												(explist 135 
+													(binop 135 
+														(exp 135 
+															(prefixexp 135 
+																(var 135 
+																	(Name 135 userinfo)
+																)
+															)
+														)
+														(.. 135 )
+														(binop 135 
+															(exp 135 
+																(String 135 @)
+															)
+															(.. 135 )
+															(exp 135 
+																(prefixexp 135 
+																	(var 135 
+																		(Name 135 authority)
+																	)
+																)
+															)
+														)
+													)
+												)
+											)
+										)
+									)
+									(end 135 )
+								)
+							)
+						)
+						(end 136 )
+					)
+					(stat 137 
+						(if 137 )
+						(exp 137 
+							(prefixexp 137 
+								(var 137 
+									(Name 137 authority)
+								)
+							)
+						)
+						(then 137 )
+						(block 137 
+							(chunk 137 
+								(stat 137 
+									(varlist 137 
+										(var 137 
+											(Name 137 url)
+										)
+									)
+									(= 137 )
+									(explist 137 
+										(binop 137 
+											(exp 137 
+												(String 137 //)
+											)
+											(.. 137 )
+											(binop 137 
+												(exp 137 
+													(prefixexp 137 
+														(var 137 
+															(Name 137 authority)
+														)
+													)
+												)
+												(.. 137 )
+												(exp 137 
+													(prefixexp 137 
+														(var 137 
+															(Name 137 url)
+														)
+													)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+						(end 137 )
+					)
+					(stat 138 
+						(if 138 )
+						(exp 138 
+							(prefixexp 138 
+								(var 138 
+									(prefixexp 138 
+										(var 138 
+											(Name 138 parsed)
+										)
+									)
+									(. 138 )
+									(Name 138 scheme)
+								)
+							)
+						)
+						(then 138 )
+						(block 138 
+							(chunk 138 
+								(stat 138 
+									(varlist 138 
+										(var 138 
+											(Name 138 url)
+										)
+									)
+									(= 138 )
+									(explist 138 
+										(binop 138 
+											(exp 138 
+												(prefixexp 138 
+													(var 138 
+														(prefixexp 138 
+															(var 138 
+																(Name 138 parsed)
+															)
+														)
+														(. 138 )
+														(Name 138 scheme)
+													)
+												)
+											)
+											(.. 138 )
+											(binop 138 
+												(exp 138 
+													(String 138 :)
+												)
+												(.. 138 )
+												(exp 138 
+													(prefixexp 138 
+														(var 138 
+															(Name 138 url)
+														)
+													)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+						(end 138 )
+					)
+					(stat 139 
+						(if 139 )
+						(exp 139 
+							(prefixexp 139 
+								(var 139 
+									(prefixexp 139 
+										(var 139 
+											(Name 139 parsed)
+										)
+									)
+									(. 139 )
+									(Name 139 fragment)
+								)
+							)
+						)
+						(then 139 )
+						(block 139 
+							(chunk 139 
+								(stat 139 
+									(varlist 139 
+										(var 139 
+											(Name 139 url)
+										)
+									)
+									(= 139 )
+									(explist 139 
+										(binop 139 
+											(exp 139 
+												(prefixexp 139 
+													(var 139 
+														(Name 139 url)
+													)
+												)
+											)
+											(.. 139 )
+											(binop 139 
+												(exp 139 
+													(String 139 #)
+												)
+												(.. 139 )
+												(exp 139 
+													(prefixexp 139 
+														(var 139 
+															(prefixexp 139 
+																(var 139 
+																	(Name 139 parsed)
+																)
+															)
+															(. 139 )
+															(Name 139 fragment)
+														)
+													)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+						(end 139 )
+					)
+					(laststat 141 
+						(return 141 )
+						(explist 141 
+							(exp 141 
+								(prefixexp 141 
+									(var 141 
+										(Name 141 url)
+									)
+								)
+							)
+						)
+					)
+				)
+			)
+			(end 142 )
+		)
+	)
+	(stat 152 
+		(function 152 )
+		(funcname 152 
+			(Name 152 absolute)
+		)
+		(funcbody 152 
+			(( 152 )
+			(parlist 152 
+				(namelist 152 
+					(Name 152 base_url)
+					(, 152 )
+					(Name 152 relative_url)
+				)
+			)
+			() 152 )
+			(block 153 
+				(chunk 153 
+					(stat 153 
+						(if 153 )
+						(binop 153 
+							(exp 153 
+								(prefixexp 153 
+									(functioncall 153 
+										(prefixexp 153 
+											(var 153 
+												(prefixexp 153 
+													(var 153 
+														(Name 153 base)
+													)
+												)
+												(. 153 )
+												(Name 153 type)
+											)
+										)
+										(args 153 
+											(( 153 )
+											(explist 153 
+												(exp 153 
+													(prefixexp 153 
+														(var 153 
+															(Name 153 base_url)
+														)
+													)
+												)
+											)
+											() 153 )
+										)
+									)
+								)
+							)
+							(== 153 )
+							(exp 153 
+								(String 153 table)
+							)
+						)
+						(then 153 )
+						(block 154 
+							(chunk 154 
+								(stat 154 
+									(varlist 154 
+										(var 154 
+											(Name 154 base_parsed)
+										)
+									)
+									(= 154 )
+									(explist 154 
+										(exp 154 
+											(prefixexp 154 
+												(var 154 
+													(Name 154 base_url)
+												)
+											)
+										)
+									)
+								)
+								(stat 155 
+									(varlist 155 
+										(var 155 
+											(Name 155 base_url)
+										)
+									)
+									(= 155 )
+									(explist 155 
+										(exp 155 
+											(prefixexp 155 
+												(functioncall 155 
+													(prefixexp 155 
+														(var 155 
+															(Name 155 build)
+														)
+													)
+													(args 155 
+														(( 155 )
+														(explist 155 
+															(exp 155 
+																(prefixexp 155 
+																	(var 155 
+																		(Name 155 base_parsed)
+																	)
+																)
+															)
+														)
+														() 155 )
+													)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+						(else 156 )
+						(block 157 
+							(chunk 157 
+								(stat 157 
+									(varlist 157 
+										(var 157 
+											(Name 157 base_parsed)
+										)
+									)
+									(= 157 )
+									(explist 157 
+										(exp 157 
+											(prefixexp 157 
+												(functioncall 157 
+													(prefixexp 157 
+														(var 157 
+															(Name 157 parse)
+														)
+													)
+													(args 157 
+														(( 157 )
+														(explist 157 
+															(exp 157 
+																(prefixexp 157 
+																	(var 157 
+																		(Name 157 base_url)
+																	)
+																)
+															)
+														)
+														() 157 )
+													)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+						(end 158 )
+					)
+					(stat 159 
+						(local 159 )
+						(namelist 159 
+							(Name 159 relative_parsed)
+						)
+						(= 159 )
+						(explist 159 
+							(exp 159 
+								(prefixexp 159 
+									(functioncall 159 
+										(prefixexp 159 
+											(var 159 
+												(Name 159 parse)
+											)
+										)
+										(args 159 
+											(( 159 )
+											(explist 159 
+												(exp 159 
+													(prefixexp 159 
+														(var 159 
+															(Name 159 relative_url)
+														)
+													)
+												)
+											)
+											() 159 )
+										)
+									)
+								)
+							)
+						)
+					)
+					(stat 160 
+						(if 160 )
+						(unop 160 
+							(not 160 )
+							(exp 160 
+								(prefixexp 160 
+									(var 160 
+										(Name 160 base_parsed)
+									)
+								)
+							)
+						)
+						(then 160 )
+						(block 160 
+							(chunk 160 
+								(laststat 160 
+									(return 160 )
+									(explist 160 
+										(exp 160 
+											(prefixexp 160 
+												(var 160 
+													(Name 160 relative_url)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+						(elseif 161 )
+						(unop 161 
+							(not 161 )
+							(exp 161 
+								(prefixexp 161 
+									(var 161 
+										(Name 161 relative_parsed)
+									)
+								)
+							)
+						)
+						(then 161 )
+						(block 161 
+							(chunk 161 
+								(laststat 161 
+									(return 161 )
+									(explist 161 
+										(exp 161 
+											(prefixexp 161 
+												(var 161 
+													(Name 161 base_url)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+						(elseif 162 )
+						(exp 162 
+							(prefixexp 162 
+								(var 162 
+									(prefixexp 162 
+										(var 162 
+											(Name 162 relative_parsed)
+										)
+									)
+									(. 162 )
+									(Name 162 scheme)
+								)
+							)
+						)
+						(then 162 )
+						(block 162 
+							(chunk 162 
+								(laststat 162 
+									(return 162 )
+									(explist 162 
+										(exp 162 
+											(prefixexp 162 
+												(var 162 
+													(Name 162 relative_url)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+						(else 163 )
+						(block 164 
+							(chunk 164 
+								(stat 164 
+									(varlist 164 
+										(var 164 
+											(prefixexp 164 
+												(var 164 
+													(Name 164 relative_parsed)
+												)
+											)
+											(. 164 )
+											(Name 164 scheme)
+										)
+									)
+									(= 164 )
+									(explist 164 
+										(exp 164 
+											(prefixexp 164 
+												(var 164 
+													(prefixexp 164 
+														(var 164 
+															(Name 164 base_parsed)
+														)
+													)
+													(. 164 )
+													(Name 164 scheme)
+												)
+											)
+										)
+									)
+								)
+								(stat 165 
+									(if 165 )
+									(unop 165 
+										(not 165 )
+										(exp 165 
+											(prefixexp 165 
+												(var 165 
+													(prefixexp 165 
+														(var 165 
+															(Name 165 relative_parsed)
+														)
+													)
+													(. 165 )
+													(Name 165 authority)
+												)
+											)
+										)
+									)
+									(then 165 )
+									(block 166 
+										(chunk 166 
+											(stat 166 
+												(varlist 166 
+													(var 166 
+														(prefixexp 166 
+															(var 166 
+																(Name 166 relative_parsed)
+															)
+														)
+														(. 166 )
+														(Name 166 authority)
+													)
+												)
+												(= 166 )
+												(explist 166 
+													(exp 166 
+														(prefixexp 166 
+															(var 166 
+																(prefixexp 166 
+																	(var 166 
+																		(Name 166 base_parsed)
+																	)
+																)
+																(. 166 )
+																(Name 166 authority)
+															)
+														)
+													)
+												)
+											)
+											(stat 167 
+												(if 167 )
+												(unop 167 
+													(not 167 )
+													(exp 167 
+														(prefixexp 167 
+															(var 167 
+																(prefixexp 167 
+																	(var 167 
+																		(Name 167 relative_parsed)
+																	)
+																)
+																(. 167 )
+																(Name 167 path)
+															)
+														)
+													)
+												)
+												(then 167 )
+												(block 168 
+													(chunk 168 
+														(stat 168 
+															(varlist 168 
+																(var 168 
+																	(prefixexp 168 
+																		(var 168 
+																			(Name 168 relative_parsed)
+																		)
+																	)
+																	(. 168 )
+																	(Name 168 path)
+																)
+															)
+															(= 168 )
+															(explist 168 
+																(exp 168 
+																	(prefixexp 168 
+																		(var 168 
+																			(prefixexp 168 
+																				(var 168 
+																					(Name 168 base_parsed)
+																				)
+																			)
+																			(. 168 )
+																			(Name 168 path)
+																		)
+																	)
+																)
+															)
+														)
+														(stat 169 
+															(if 169 )
+															(unop 169 
+																(not 169 )
+																(exp 169 
+																	(prefixexp 169 
+																		(var 169 
+																			(prefixexp 169 
+																				(var 169 
+																					(Name 169 relative_parsed)
+																				)
+																			)
+																			(. 169 )
+																			(Name 169 params)
+																		)
+																	)
+																)
+															)
+															(then 169 )
+															(block 170 
+																(chunk 170 
+																	(stat 170 
+																		(varlist 170 
+																			(var 170 
+																				(prefixexp 170 
+																					(var 170 
+																						(Name 170 relative_parsed)
+																					)
+																				)
+																				(. 170 )
+																				(Name 170 params)
+																			)
+																		)
+																		(= 170 )
+																		(explist 170 
+																			(exp 170 
+																				(prefixexp 170 
+																					(var 170 
+																						(prefixexp 170 
+																							(var 170 
+																								(Name 170 base_parsed)
+																							)
+																						)
+																						(. 170 )
+																						(Name 170 params)
+																					)
+																				)
+																			)
+																		)
+																	)
+																	(stat 171 
+																		(if 171 )
+																		(unop 171 
+																			(not 171 )
+																			(exp 171 
+																				(prefixexp 171 
+																					(var 171 
+																						(prefixexp 171 
+																							(var 171 
+																								(Name 171 relative_parsed)
+																							)
+																						)
+																						(. 171 )
+																						(Name 171 query)
+																					)
+																				)
+																			)
+																		)
+																		(then 171 )
+																		(block 172 
+																			(chunk 172 
+																				(stat 172 
+																					(varlist 172 
+																						(var 172 
+																							(prefixexp 172 
+																								(var 172 
+																									(Name 172 relative_parsed)
+																								)
+																							)
+																							(. 172 )
+																							(Name 172 query)
+																						)
+																					)
+																					(= 172 )
+																					(explist 172 
+																						(exp 172 
+																							(prefixexp 172 
+																								(var 172 
+																									(prefixexp 172 
+																										(var 172 
+																											(Name 172 base_parsed)
+																										)
+																									)
+																									(. 172 )
+																									(Name 172 query)
+																								)
+																							)
+																						)
+																					)
+																				)
+																			)
+																		)
+																		(end 173 )
+																	)
+																)
+															)
+															(end 174 )
+														)
+													)
+												)
+												(else 175 )
+												(block 176 
+													(chunk 176 
+														(stat 176 
+															(varlist 176 
+																(var 176 
+																	(prefixexp 176 
+																		(var 176 
+																			(Name 176 relative_parsed)
+																		)
+																	)
+																	(. 176 )
+																	(Name 176 path)
+																)
+															)
+															(= 176 )
+															(explist 176 
+																(exp 176 
+																	(prefixexp 176 
+																		(functioncall 176 
+																			(prefixexp 176 
+																				(var 176 
+																					(Name 176 absolute_path)
+																				)
+																			)
+																			(args 176 
+																				(( 176 )
+																				(explist 176 
+																					(binop 176 
+																						(exp 176 
+																							(prefixexp 176 
+																								(var 176 
+																									(prefixexp 176 
+																										(var 176 
+																											(Name 176 base_parsed)
+																										)
+																									)
+																									(. 176 )
+																									(Name 176 path)
+																								)
+																							)
+																						)
+																						(or 176 )
+																						(exp 176 
+																							(String 176 )
+																						)
+																					)
+																					(, 176 )
+																					(exp 177 
+																						(prefixexp 177 
+																							(var 177 
+																								(prefixexp 177 
+																									(var 177 
+																										(Name 177 relative_parsed)
+																									)
+																								)
+																								(. 177 )
+																								(Name 177 path)
+																							)
+																						)
+																					)
+																				)
+																				() 177 )
+																			)
+																		)
+																	)
+																)
+															)
+														)
+													)
+												)
+												(end 178 )
+											)
+										)
+									)
+									(end 179 )
+								)
+								(laststat 180 
+									(return 180 )
+									(explist 180 
+										(exp 180 
+											(prefixexp 180 
+												(functioncall 180 
+													(prefixexp 180 
+														(var 180 
+															(Name 180 build)
+														)
+													)
+													(args 180 
+														(( 180 )
+														(explist 180 
+															(exp 180 
+																(prefixexp 180 
+																	(var 180 
+																		(Name 180 relative_parsed)
+																	)
+																)
+															)
+														)
+														() 180 )
+													)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+						(end 181 )
+					)
+				)
+			)
+			(end 182 )
+		)
+	)
+	(stat 191 
+		(function 191 )
+		(funcname 191 
+			(Name 191 parse_path)
+		)
+		(funcbody 191 
+			(( 191 )
+			(parlist 191 
+				(namelist 191 
+					(Name 191 path)
+				)
+			)
+			() 191 )
+			(block 192 
+				(chunk 192 
+					(stat 192 
+						(local 192 )
+						(namelist 192 
+							(Name 192 parsed)
+						)
+						(= 192 )
+						(explist 192 
+							(exp 192 
+								(tableconstructor 192 
+									({ 192 )
+									(} 192 )
+								)
+							)
+						)
+					)
+					(stat 193 
+						(varlist 193 
+							(var 193 
+								(Name 193 path)
+							)
+						)
+						(= 193 )
+						(explist 193 
+							(binop 193 
+								(exp 193 
+									(prefixexp 193 
+										(var 193 
+											(Name 193 path)
+										)
+									)
+								)
+								(or 193 )
+								(exp 193 
+									(String 193 )
+								)
+							)
+						)
+					)
+					(stat 195 
+						(functioncall 195 
+							(prefixexp 195 
+								(var 195 
+									(prefixexp 195 
+										(var 195 
+											(Name 195 string)
+										)
+									)
+									(. 195 )
+									(Name 195 gsub)
+								)
+							)
+							(args 195 
+								(( 195 )
+								(explist 195 
+									(exp 195 
+										(prefixexp 195 
+											(var 195 
+												(Name 195 path)
+											)
+										)
+									)
+									(, 195 )
+									(exp 195 
+										(String 195 ([^/]+))
+									)
+									(, 195 )
+									(exp 195 
+										(function 195 
+											(function 195 )
+											(funcbody 195 
+												(( 195 )
+												(parlist 195 
+													(namelist 195 
+														(Name 195 s)
+													)
+												)
+												() 195 )
+												(block 195 
+													(chunk 195 
+														(stat 195 
+															(functioncall 195 
+																(prefixexp 195 
+																	(var 195 
+																		(prefixexp 195 
+																			(var 195 
+																				(Name 195 table)
+																			)
+																		)
+																		(. 195 )
+																		(Name 195 insert)
+																	)
+																)
+																(args 195 
+																	(( 195 )
+																	(explist 195 
+																		(exp 195 
+																			(prefixexp 195 
+																				(var 195 
+																					(Name 195 parsed)
+																				)
+																			)
+																		)
+																		(, 195 )
+																		(exp 195 
+																			(prefixexp 195 
+																				(var 195 
+																					(Name 195 s)
+																				)
+																			)
+																		)
+																	)
+																	() 195 )
+																)
+															)
+														)
+													)
+												)
+												(end 195 )
+											)
+										)
+									)
+								)
+								() 195 )
+							)
+						)
+					)
+					(stat 196 
+						(for 196 )
+						(Name 196 i)
+						(= 196 )
+						(exp 196 
+							(Number 196 1)
+						)
+						(, 196 )
+						(exp 196 
+							(prefixexp 196 
+								(functioncall 196 
+									(prefixexp 196 
+										(var 196 
+											(prefixexp 196 
+												(var 196 
+													(Name 196 table)
+												)
+											)
+											(. 196 )
+											(Name 196 getn)
+										)
+									)
+									(args 196 
+										(( 196 )
+										(explist 196 
+											(exp 196 
+												(prefixexp 196 
+													(var 196 
+														(Name 196 parsed)
+													)
+												)
+											)
+										)
+										() 196 )
+									)
+								)
+							)
+						)
+						(do 196 )
+						(block 197 
+							(chunk 197 
+								(stat 197 
+									(varlist 197 
+										(var 197 
+											(prefixexp 197 
+												(var 197 
+													(Name 197 parsed)
+												)
+											)
+											([ 197 )
+											(exp 197 
+												(prefixexp 197 
+													(var 197 
+														(Name 197 i)
+													)
+												)
+											)
+											(] 197 )
+										)
+									)
+									(= 197 )
+									(explist 197 
+										(exp 197 
+											(prefixexp 197 
+												(functioncall 197 
+													(prefixexp 197 
+														(var 197 
+															(Name 197 unescape)
+														)
+													)
+													(args 197 
+														(( 197 )
+														(explist 197 
+															(exp 197 
+																(prefixexp 197 
+																	(var 197 
+																		(prefixexp 197 
+																			(var 197 
+																				(Name 197 parsed)
+																			)
+																		)
+																		([ 197 )
+																		(exp 197 
+																			(prefixexp 197 
+																				(var 197 
+																					(Name 197 i)
+																				)
+																			)
+																		)
+																		(] 197 )
+																	)
+																)
+															)
+														)
+														() 197 )
+													)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+						(end 198 )
+					)
+					(stat 199 
+						(if 199 )
+						(binop 199 
+							(exp 199 
+								(prefixexp 199 
+									(functioncall 199 
+										(prefixexp 199 
+											(var 199 
+												(prefixexp 199 
+													(var 199 
+														(Name 199 string)
+													)
+												)
+												(. 199 )
+												(Name 199 sub)
+											)
+										)
+										(args 199 
+											(( 199 )
+											(explist 199 
+												(exp 199 
+													(prefixexp 199 
+														(var 199 
+															(Name 199 path)
+														)
+													)
+												)
+												(, 199 )
+												(exp 199 
+													(Number 199 1)
+												)
+												(, 199 )
+												(exp 199 
+													(Number 199 1)
+												)
+											)
+											() 199 )
+										)
+									)
+								)
+							)
+							(== 199 )
+							(exp 199 
+								(String 199 /)
+							)
+						)
+						(then 199 )
+						(block 199 
+							(chunk 199 
+								(stat 199 
+									(varlist 199 
+										(var 199 
+											(prefixexp 199 
+												(var 199 
+													(Name 199 parsed)
+												)
+											)
+											(. 199 )
+											(Name 199 is_absolute)
+										)
+									)
+									(= 199 )
+									(explist 199 
+										(exp 199 
+											(Number 199 1)
+										)
+									)
+								)
+							)
+						)
+						(end 199 )
+					)
+					(stat 200 
+						(if 200 )
+						(binop 200 
+							(exp 200 
+								(prefixexp 200 
+									(functioncall 200 
+										(prefixexp 200 
+											(var 200 
+												(prefixexp 200 
+													(var 200 
+														(Name 200 string)
+													)
+												)
+												(. 200 )
+												(Name 200 sub)
+											)
+										)
+										(args 200 
+											(( 200 )
+											(explist 200 
+												(exp 200 
+													(prefixexp 200 
+														(var 200 
+															(Name 200 path)
+														)
+													)
+												)
+												(, 200 )
+												(unop 200 
+													(- 200 )
+													(exp 200 
+														(Number 200 1)
+													)
+												)
+												(, 200 )
+												(unop 200 
+													(- 200 )
+													(exp 200 
+														(Number 200 1)
+													)
+												)
+											)
+											() 200 )
+										)
+									)
+								)
+							)
+							(== 200 )
+							(exp 200 
+								(String 200 /)
+							)
+						)
+						(then 200 )
+						(block 200 
+							(chunk 200 
+								(stat 200 
+									(varlist 200 
+										(var 200 
+											(prefixexp 200 
+												(var 200 
+													(Name 200 parsed)
+												)
+											)
+											(. 200 )
+											(Name 200 is_directory)
+										)
+									)
+									(= 200 )
+									(explist 200 
+										(exp 200 
+											(Number 200 1)
+										)
+									)
+								)
+							)
+						)
+						(end 200 )
+					)
+					(laststat 201 
+						(return 201 )
+						(explist 201 
+							(exp 201 
+								(prefixexp 201 
+									(var 201 
+										(Name 201 parsed)
+									)
+								)
+							)
+						)
+					)
+				)
+			)
+			(end 202 )
+		)
+	)
+	(stat 212 
+		(function 212 )
+		(funcname 212 
+			(Name 212 build_path)
+		)
+		(funcbody 212 
+			(( 212 )
+			(parlist 212 
+				(namelist 212 
+					(Name 212 parsed)
+					(, 212 )
+					(Name 212 unsafe)
+				)
+			)
+			() 212 )
+			(block 213 
+				(chunk 213 
+					(stat 213 
+						(local 213 )
+						(namelist 213 
+							(Name 213 path)
+						)
+						(= 213 )
+						(explist 213 
+							(exp 213 
+								(String 213 )
+							)
+						)
+					)
+					(stat 214 
+						(local 214 )
+						(namelist 214 
+							(Name 214 n)
+						)
+						(= 214 )
+						(explist 214 
+							(exp 214 
+								(prefixexp 214 
+									(functioncall 214 
+										(prefixexp 214 
+											(var 214 
+												(prefixexp 214 
+													(var 214 
+														(Name 214 table)
+													)
+												)
+												(. 214 )
+												(Name 214 getn)
+											)
+										)
+										(args 214 
+											(( 214 )
+											(explist 214 
+												(exp 214 
+													(prefixexp 214 
+														(var 214 
+															(Name 214 parsed)
+														)
+													)
+												)
+											)
+											() 214 )
+										)
+									)
+								)
+							)
+						)
+					)
+					(stat 215 
+						(if 215 )
+						(exp 215 
+							(prefixexp 215 
+								(var 215 
+									(Name 215 unsafe)
+								)
+							)
+						)
+						(then 215 )
+						(block 216 
+							(chunk 216 
+								(stat 216 
+									(for 216 )
+									(Name 216 i)
+									(= 216 )
+									(exp 216 
+										(Number 216 1)
+									)
+									(, 216 )
+									(binop 216 
+										(exp 216 
+											(prefixexp 216 
+												(var 216 
+													(Name 216 n)
+												)
+											)
+										)
+										(- 216 )
+										(exp 216 
+											(Number 216 1)
+										)
+									)
+									(do 216 )
+									(block 217 
+										(chunk 217 
+											(stat 217 
+												(varlist 217 
+													(var 217 
+														(Name 217 path)
+													)
+												)
+												(= 217 )
+												(explist 217 
+													(binop 217 
+														(exp 217 
+															(prefixexp 217 
+																(var 217 
+																	(Name 217 path)
+																)
+															)
+														)
+														(.. 217 )
+														(exp 217 
+															(prefixexp 217 
+																(var 217 
+																	(prefixexp 217 
+																		(var 217 
+																			(Name 217 parsed)
+																		)
+																	)
+																	([ 217 )
+																	(exp 217 
+																		(prefixexp 217 
+																			(var 217 
+																				(Name 217 i)
+																			)
+																		)
+																	)
+																	(] 217 )
+																)
+															)
+														)
+													)
+												)
+											)
+											(stat 218 
+												(varlist 218 
+													(var 218 
+														(Name 218 path)
+													)
+												)
+												(= 218 )
+												(explist 218 
+													(binop 218 
+														(exp 218 
+															(prefixexp 218 
+																(var 218 
+																	(Name 218 path)
+																)
+															)
+														)
+														(.. 218 )
+														(exp 218 
+															(String 218 /)
+														)
+													)
+												)
+											)
+										)
+									)
+									(end 219 )
+								)
+								(stat 220 
+									(if 220 )
+									(binop 220 
+										(exp 220 
+											(prefixexp 220 
+												(var 220 
+													(Name 220 n)
+												)
+											)
+										)
+										(> 220 )
+										(exp 220 
+											(Number 220 0)
+										)
+									)
+									(then 220 )
+									(block 221 
+										(chunk 221 
+											(stat 221 
+												(varlist 221 
+													(var 221 
+														(Name 221 path)
+													)
+												)
+												(= 221 )
+												(explist 221 
+													(binop 221 
+														(exp 221 
+															(prefixexp 221 
+																(var 221 
+																	(Name 221 path)
+																)
+															)
+														)
+														(.. 221 )
+														(exp 221 
+															(prefixexp 221 
+																(var 221 
+																	(prefixexp 221 
+																		(var 221 
+																			(Name 221 parsed)
+																		)
+																	)
+																	([ 221 )
+																	(exp 221 
+																		(prefixexp 221 
+																			(var 221 
+																				(Name 221 n)
+																			)
+																		)
+																	)
+																	(] 221 )
+																)
+															)
+														)
+													)
+												)
+											)
+											(stat 222 
+												(if 222 )
+												(exp 222 
+													(prefixexp 222 
+														(var 222 
+															(prefixexp 222 
+																(var 222 
+																	(Name 222 parsed)
+																)
+															)
+															(. 222 )
+															(Name 222 is_directory)
+														)
+													)
+												)
+												(then 222 )
+												(block 222 
+													(chunk 222 
+														(stat 222 
+															(varlist 222 
+																(var 222 
+																	(Name 222 path)
+																)
+															)
+															(= 222 )
+															(explist 222 
+																(binop 222 
+																	(exp 222 
+																		(prefixexp 222 
+																			(var 222 
+																				(Name 222 path)
+																			)
+																		)
+																	)
+																	(.. 222 )
+																	(exp 222 
+																		(String 222 /)
+																	)
+																)
+															)
+														)
+													)
+												)
+												(end 222 )
+											)
+										)
+									)
+									(end 223 )
+								)
+							)
+						)
+						(else 224 )
+						(block 225 
+							(chunk 225 
+								(stat 225 
+									(for 225 )
+									(Name 225 i)
+									(= 225 )
+									(exp 225 
+										(Number 225 1)
+									)
+									(, 225 )
+									(binop 225 
+										(exp 225 
+											(prefixexp 225 
+												(var 225 
+													(Name 225 n)
+												)
+											)
+										)
+										(- 225 )
+										(exp 225 
+											(Number 225 1)
+										)
+									)
+									(do 225 )
+									(block 226 
+										(chunk 226 
+											(stat 226 
+												(varlist 226 
+													(var 226 
+														(Name 226 path)
+													)
+												)
+												(= 226 )
+												(explist 226 
+													(binop 226 
+														(exp 226 
+															(prefixexp 226 
+																(var 226 
+																	(Name 226 path)
+																)
+															)
+														)
+														(.. 226 )
+														(exp 226 
+															(prefixexp 226 
+																(functioncall 226 
+																	(prefixexp 226 
+																		(var 226 
+																			(Name 226 protect_segment)
+																		)
+																	)
+																	(args 226 
+																		(( 226 )
+																		(explist 226 
+																			(exp 226 
+																				(prefixexp 226 
+																					(var 226 
+																						(prefixexp 226 
+																							(var 226 
+																								(Name 226 parsed)
+																							)
+																						)
+																						([ 226 )
+																						(exp 226 
+																							(prefixexp 226 
+																								(var 226 
+																									(Name 226 i)
+																								)
+																							)
+																						)
+																						(] 226 )
+																					)
+																				)
+																			)
+																		)
+																		() 226 )
+																	)
+																)
+															)
+														)
+													)
+												)
+											)
+											(stat 227 
+												(varlist 227 
+													(var 227 
+														(Name 227 path)
+													)
+												)
+												(= 227 )
+												(explist 227 
+													(binop 227 
+														(exp 227 
+															(prefixexp 227 
+																(var 227 
+																	(Name 227 path)
+																)
+															)
+														)
+														(.. 227 )
+														(exp 227 
+															(String 227 /)
+														)
+													)
+												)
+											)
+										)
+									)
+									(end 228 )
+								)
+								(stat 229 
+									(if 229 )
+									(binop 229 
+										(exp 229 
+											(prefixexp 229 
+												(var 229 
+													(Name 229 n)
+												)
+											)
+										)
+										(> 229 )
+										(exp 229 
+											(Number 229 0)
+										)
+									)
+									(then 229 )
+									(block 230 
+										(chunk 230 
+											(stat 230 
+												(varlist 230 
+													(var 230 
+														(Name 230 path)
+													)
+												)
+												(= 230 )
+												(explist 230 
+													(binop 230 
+														(exp 230 
+															(prefixexp 230 
+																(var 230 
+																	(Name 230 path)
+																)
+															)
+														)
+														(.. 230 )
+														(exp 230 
+															(prefixexp 230 
+																(functioncall 230 
+																	(prefixexp 230 
+																		(var 230 
+																			(Name 230 protect_segment)
+																		)
+																	)
+																	(args 230 
+																		(( 230 )
+																		(explist 230 
+																			(exp 230 
+																				(prefixexp 230 
+																					(var 230 
+																						(prefixexp 230 
+																							(var 230 
+																								(Name 230 parsed)
+																							)
+																						)
+																						([ 230 )
+																						(exp 230 
+																							(prefixexp 230 
+																								(var 230 
+																									(Name 230 n)
+																								)
+																							)
+																						)
+																						(] 230 )
+																					)
+																				)
+																			)
+																		)
+																		() 230 )
+																	)
+																)
+															)
+														)
+													)
+												)
+											)
+											(stat 231 
+												(if 231 )
+												(exp 231 
+													(prefixexp 231 
+														(var 231 
+															(prefixexp 231 
+																(var 231 
+																	(Name 231 parsed)
+																)
+															)
+															(. 231 )
+															(Name 231 is_directory)
+														)
+													)
+												)
+												(then 231 )
+												(block 231 
+													(chunk 231 
+														(stat 231 
+															(varlist 231 
+																(var 231 
+																	(Name 231 path)
+																)
+															)
+															(= 231 )
+															(explist 231 
+																(binop 231 
+																	(exp 231 
+																		(prefixexp 231 
+																			(var 231 
+																				(Name 231 path)
+																			)
+																		)
+																	)
+																	(.. 231 )
+																	(exp 231 
+																		(String 231 /)
+																	)
+																)
+															)
+														)
+													)
+												)
+												(end 231 )
+											)
+										)
+									)
+									(end 232 )
+								)
+							)
+						)
+						(end 233 )
+					)
+					(stat 234 
+						(if 234 )
+						(exp 234 
+							(prefixexp 234 
+								(var 234 
+									(prefixexp 234 
+										(var 234 
+											(Name 234 parsed)
+										)
+									)
+									(. 234 )
+									(Name 234 is_absolute)
+								)
+							)
+						)
+						(then 234 )
+						(block 234 
+							(chunk 234 
+								(stat 234 
+									(varlist 234 
+										(var 234 
+											(Name 234 path)
+										)
+									)
+									(= 234 )
+									(explist 234 
+										(binop 234 
+											(exp 234 
+												(String 234 /)
+											)
+											(.. 234 )
+											(exp 234 
+												(prefixexp 234 
+													(var 234 
+														(Name 234 path)
+													)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+						(end 234 )
+					)
+					(laststat 235 
+						(return 235 )
+						(explist 235 
+							(exp 235 
+								(prefixexp 235 
+									(var 235 
+										(Name 235 path)
+									)
+								)
+							)
+						)
+					)
+				)
+			)
+			(end 236 )
+		)
+	)
+	(stat 240 
+		(functioncall 240 
+			(prefixexp 240 
+				(var 240 
+					(Name 240 print)
+				)
+			)
+			(args 240 
+				(( 240 )
+				(explist 240 
+					(exp 240 
+						(String 240 a very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringEND)
+					)
+				)
+				() 240 )
+			)
+		)
+	)
+	(stat 242 
+		(functioncall 242 
+			(prefixexp 242 
+				(var 242 
+					(Name 242 print)
+				)
+			)
+			(args 242 
+				(( 242 )
+				(explist 242 
+					(exp 242 
+						(String 242 5! ?7 Octal is fucking1337 
+  y 	 \  apple 
+
+ 	 = abcd)
+					)
+				)
+				() 242 )
+			)
+		)
+	)
+	(stat 244 
+		(functioncall 244 
+			(prefixexp 244 
+				(var 244 
+					(Name 244 print)
+				)
+			)
+			(args 244 
+				(( 244 )
+				(explist 244 
+					(exp 244 
+						(String 244 string with keywords and or not do else end false function if local nil return then until while ; , ... . [ ( ) } : - ^ % <= > == ~= $)
+					)
+				)
+				() 244 )
+			)
+		)
+	)
+	(stat 248 
+		(functioncall 248 
+			(prefixexp 248 
+				(var 248 
+					(Name 248 print)
+				)
+			)
+			(args 248 
+				(( 248 )
+				(explist 248 
+					(exp 248 
+						(String 248 " " " " ')
+					)
+				)
+				() 248 )
+			)
+		)
+	)
+	(stat 249 
+		(functioncall 249 
+			(prefixexp 249 
+				(var 249 
+					(Name 249 print)
+				)
+			)
+			(args 249 
+				(( 249 )
+				(explist 249 
+					(exp 249 
+						(String 249  ' ' ' ")
+					)
+				)
+				() 249 )
+			)
+		)
+	)
+)

@@ -1,0 +1,7 @@
+BNFDESCRIPTION    -> DEFINITION BNFDESCRIPTION* .
+DEFINITION        -> NONTERMINAL '->' EXPRESSION .
+EXPRESSION        -> SEQUENCE | SEQUENCE '|' RIGHTHANDSIDE | .
+SEQUENCE          -> TERM [SEQUENCE] .
+TERM              -> NONTERMINAL | STRING | '['expression']' | '('expression')' | terminal+ | terminal* .
+NONTERMINAL       -> IDENTIFIER .
+STRING            -> 'characters' | "characters" .

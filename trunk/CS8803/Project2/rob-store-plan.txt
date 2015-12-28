@@ -1,0 +1,2 @@
+(ACPLAN(rob-store-planACPLAN-START rob-store-plan10 rob-store-plan SUBPLAN rob-store-fraud-subplan)  (SUBFOO1                ( , , , , ,)))
+(ACPLAN(rob-store-plan10 rob-store-planACPLAN-END  rob-store-plan)  (get-rich (agent          ,            ,  , , ,)))

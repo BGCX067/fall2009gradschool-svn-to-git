@@ -1,0 +1,3 @@
+(ACPLAN(discontinued-investigation-planACPLAN-START discontinued-investigation-plan2 discontinued-investigation-plan)  (announced-investigation        (BLANK          , BLANK            ,  , , ,)))
+(ACPLAN(discontinued-investigation-plan2 discontinued-investigation-plan3            discontinued-investigation-plan)  (discontinued-investigation      (BLANK              , BLANK     ,  , , ,)))
+(ACPLAN(discontinued-investigation-plan3 discontinued-investigation-planACPLAN-END   discontinued-investigation-plan)  (could-not-continue-investigation-because-government-is-controled-by (agent          , object      ,   ,  , ,)))

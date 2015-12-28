@@ -1,0 +1,13 @@
+(ACPLAN(biological-weapon-development-planACPLAN-START biological-weapon-development-plan2 biological-weapon-development-plan)  (founded                (          ,       BLANK     ,   , , ,)))
+(ACPLAN(biological-weapon-development-plan2 biological-weapon-development-plan3            biological-weapon-development-plan)  (started                (two-key-scientists          , BLANK ,  , , ,)))
+(ACPLAN(biological-weapon-development-plan3 biological-weapon-development-plan4            biological-weapon-development-plan)  (worked-with            (BLANK          , BLANK   ,  , , ,)))
+(ACPLAN(biological-weapon-development-plan4 biological-weapon-development-plan5            biological-weapon-development-plan)  (chose                  (us-government          , BLANK      ,        , , ,)))
+(ACPLAN(biological-weapon-development-plan5 biological-weapon-development-plan9            biological-weapon-development-plan)  (approved               (agriculture-department           ,  BLANK          ,        , , ,)))
+(ACPLAN(biological-weapon-development-plan9 biological-weapon-development-plan10           biological-weapon-development-plan SUBPLAN disease-research-subplan)  (SDS               (   ,  ,        , , ,)))
+
+(ACPLAN(biological-weapon-development-plan10 biological-weapon-development-planACPLAN-END  biological-weapon-development-plan)  (develop-biological-weapon (agent          ,   object  ,   , , ,)))
+
+
+
+
+

@@ -1,0 +1,20 @@
+Description of Grammar for EBNF:
+    
+I adheared to the guidelines on the project for my grammar, except
+that I named a few things a little bit differently. My EBNF grammar is as follows:
+
+BNFDESCRIPTION    -> DEFINITION BNFDESCRIPTION* .
+DEFINITION        -> NONTERMINAL '->' EXPRESSION .
+EXPRESSION        -> SEQUENCE | SEQUENCE '|' RIGHTHANDSIDE | .
+SEQUENCE          -> TERM [SEQUENCE] .
+TERM              -> NONTERMINAL | STRING | '['expression']' | '('expression')' | terminal+ | terminal* .
+NONTERMINAL       -> characters .
+STRING            -> 'characters' | "characters" .
+
+My regular expressions are readabble in my lex file, 
+and my ebnf.ebnf which is similar to the above is one of my test cases.
+
+My ebnf grammar in ebnf is ebnf.ebnf.
+My bf grammar in bnf is bnf.ebnf.
+
+My test files are bnf.ebnf, ebnf.ebnf, test.txt and meta.txt and the output files are bnf.ebnf.output, ebnf.ebnf.output, test.txt.output, and meta.txt.output respectively.

@@ -1,0 +1,12 @@
+one thing i know i dont support is:
+
+"Strings in Lua can contain any 8-bit value, including embedded zeros, which can be specified as '\0'. "
+
+the embeded 0 part that is the string that pops out will be only up to the embded zero
+
+
+
+I realise now that im uploading it that T-Square has the due date as Sep8 12:00am which would be the first secound of Sep8th
+today, but then the assignment says "11:59:59pm on the due date".
+In short:  Did i submit this late?  If so any chance I can get away without loosing points b/c of my timedue/date confusion?
+

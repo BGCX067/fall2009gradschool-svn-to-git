@@ -1,0 +1,28 @@
+CS8803 - KBAI
+Report for HW1 (aicop)
+Puyan Lotfi
+
+My overall design centers around something I like to call
+the "Global Frames Registry" which is a hash table that maps
+any value pulled out of entries from the input file to a
+coresponding frame.
+
+Frames are represented as Lisp structures that contain a list
+of slot names, and a hash table of fillers that map from the slot
+names to the filler values.
+
+So for example (gethash 'robert-e-ford globalFrameRegistry) would
+get you a collection of all frames dealing with robert-e-ford, and 
+(gethash 'agent (frame-fillers frm)) would get the agent value of the
+frame frm.
+
+Other than that, most things are hardcoded in  a terrible way.
+I wanted to do a really fancy muturally recursive search that would
+take some Lisp symbol and return a collection of related frames, which
+would them be ordered and filtered depending on relevance and bootstraped
+knowledge. But unfortunately my search code was full of bugs and my fancy boot straping
+code never got done, so I had to hardcode a lot of things.
+
+Also, I don't do anything with fact entries. Just didn't get to it.
+Note: I have been working on this project for weeks, and I did do it in
+LISP, which I didn't know starting out (and that was kind of rough).

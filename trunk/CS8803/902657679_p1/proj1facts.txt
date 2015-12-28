@@ -1,0 +1,50 @@
+(3 (works-for(laurel-sulfate , boynton-labs , , , )))
+
+(4 (same-as(female-companion , laurel-sulfate , , , )))
+
+(7 (named-after(lab , philip-boynton , , , )))
+
+(40 (had-under( , hand , shirt , , )))
+
+(46 (has-a(john-torch , personal-frustating-history , , bob-story , )))
+
+(47 (has-a(john-torch , personal-frustating-history , , tom-lanctot , )))
+
+(48 (made(john-torch , negative-comments , , martin-luther-king-jr , )))
+
+(52 (active-in(john-torch , politics , , , )))
+
+(53 (asked-for(bob-leeds , ammendment , , city-council , )))
+
+(55 (interested-in(john-torch , arts , , , )))
+
+(56 (interested-in(john-torch , culture , , , )))
+
+(61 (contender(john-torch , alderwood-mayor , , , )))
+
+(62 (support-among(john-torch , citizens , , , )))
+
+(63 (confident(john-torch , advisors , , , )))
+
+(65 (said(rex-luthor , were-unfortunate(steamy-photos(john torch))) , , , ))
+
+(66 (said(rex-luthor , are(moral-values important) , , , )))
+
+(82 (announced(chief-investigator , closed(von-ryker-institute) , , , )))
+
+(84 (announced(rex-luthor , new-lab , alderwood , , )))
+
+(85 (believes(rex-luthor , increase(new-lab economic-development) , , , )))
+
+(86 (has-been(alderwood , financial-hardship , , , )))
+
+
+(88 (has-a(washington-state , biotechnology-initiative , , , )))
+
+(92 (said(philip-boynton , focus-on( boynton-labs mad-cow-disease) , , , )))
+
+(97 (exists-because(foot-and-mouth-disease , threat , , , )))
+
+(101 (has-goal(agriculture-department , test 220000-animals , , , december-2005 )))
+
+(98 (needed(stronger-measures , protect-from-mad-cow-disease , , , )))

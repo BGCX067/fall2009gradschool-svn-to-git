@@ -1,0 +1,51 @@
+(works-for(laurel-sulfate , boynton-labs , , , ))
+(same-as(female-companion , laurel-sulfate , , , ))
+(named-after(lab , philip-boynton , , , ))
+(had-under( , hand , shirt , , ))
+(has-a(john-torch , personal-frustating-history , , bob-story , ))
+(has-a(john-torch , personal-frustating-history , , tom-lanctot , ))
+(made(john-torch , negative-comments , , martin-luther-king-jr , ))
+(active-in(john-torch , politics , , , ))
+(asked-for(bob-leeds , ammendment , , city-council , ))
+(interested-in(john-torch , arts , , , ))
+(interested-in(john-torch , culture , , , ))
+(wants(rex-luthor , upgrade-voting-machines , , , ))
+(vulnerable(voting-machines , tampering , , , ))
+(contender(john-torch , alderwood-mayor , , , ))
+(support-among(john-torch , citizens , , , ))
+(confident(john-torch , advisors , , , ))
+(said(rex-luthor , (were-unfortunate(steamy-photos(john torch))) , , , ))
+(said(rex-luthor , are(moral-values important) , , , ))
+(announced(chief-investigator , closed(von-ryker-institute) , , , ))
+(announced(rex-luthor , new-lab , alderwood , , ))
+(believes(rex-luthor , increase(new-lab economic-development) , , , ))
+(has-been(alderwood , financial-hardship , , , ))
+(required( boynton-labs , start-up-funds 1000000 , , , ))
+(has-a(washington-state , biotechnology-initiative , , , ))
+(said(philip-boynton , focus-on( boynton-labs mad-cow-disease) , , , ))
+(exists-because(foot-and-mouth-disease , threat , , , ))
+(has-goal(agriculture-department , test 220000-animals , , , december-2005 ))
+(needed(stronger-measures , protect-from-mad-cow-disease , , , ))
+
+same-as             merge and equate hashes
+works-for           dependency to object, lower hierarchy than founder
+named-after         uses agent and object tokens to map to other facts
+had-under           ?
+has-a               link agent to co-agent
+made                ?
+active-in           ?
+asked-for           ?
+interested-in       ?
+wants               want of a solution to a problem or deficiency
+vulnerable          represent a problem or deficiency -> someone "wants" a solution
+contender
+support-among
+confident
+said                say something in response to an event / object
+announced           same as say, but usually at the end of a chain
+believes            some preconceived notion about an object that isn't realized, early stage of chain
+has-been            ?
+required            
+exists-because
+has-goal
+needed             similar to "wants"

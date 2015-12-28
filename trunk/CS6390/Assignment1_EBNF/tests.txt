@@ -1,0 +1,22 @@
+foo -> bar 'asds'.
+foo -> 'asd' dfdf.
+foo -> bar | 'asds'.
+foo -> 'asd' | dfdf.
+
+foo -> qqqq  wwww rrrr 'asas' erer 'wewe'.
+
+foooo -> 'aaaaaaaaa' bbbbbbbbb 'cccccccc' dddddddd 'eeeeeee'.
+
+foooo -> 'aaaaaaaaa' | bbbbbbbbb | 'cccccccc' | dddddddd | 'eeeeeee'.
+
+foooo -> 'aaaaaaaaa'  bbbbbbbbb | 'cccccccc' | (dddddddd | 'eeeeeee').
+
+foooo -> 'aaaaaaaaa'  bbbbbbbbb | 'cccccccc' | (dddddddd | 'eeeeeee') | [ fffffff ].
+
+foooo -> 'aaaaaaaaa'  bbbbbbbbb | 'cccccccc'* | (dddddddd* | 'eeeeeee')* | [ fffffff ]*.
+
+foooo -> 'aaaaaaaaa'  bbbbbbbbb+ | 'cccccccc'* | (dddddddd* | 'eeeeeee')+ | [ fffffff ]*;
+
+
+foo -> bar.
+foo -> bar 'baz'.

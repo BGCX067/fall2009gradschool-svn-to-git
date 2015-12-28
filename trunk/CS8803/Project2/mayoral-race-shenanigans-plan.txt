@@ -1,0 +1,20 @@
+(ACPLAN(mayoral-race-shenanigans-planACPLAN-START mayoral-race-shenanigans-plan2 mayoral-race-shenanigans-plan)   (voted-against         (BLANK          , liqour-license            ,  , , ,)))
+(ACPLAN(mayoral-race-shenanigans-plan2 mayoral-race-shenanigans-plan3            mayoral-race-shenanigans-plan)   (opposed               (BLANK          ,  gambling     ,  , , ,)))
+(ACPLAN(mayoral-race-shenanigans-plan3 mayoral-race-shenanigans-plan4            mayoral-race-shenanigans-plan)   (raised                (BLANK          ,     ,  , , ,)))
+(ACPLAN(mayoral-race-shenanigans-plan4 mayoral-race-shenanigans-plan5            mayoral-race-shenanigans-plan)   (runs-for      (BLANK          ,     ,        , , ,)))
+(ACPLAN(mayoral-race-shenanigans-plan5 mayoral-race-shenanigans-plan6            mayoral-race-shenanigans-plan)   (were-taken           (          , steamy-photos          ,        , , ,)))
+(ACPLAN(mayoral-race-shenanigans-plan6 mayoral-race-shenanigans-plan7            mayoral-race-shenanigans-plan)   (print         (          , steamy-photos          ,        , , ,)))
+(ACPLAN(mayoral-race-shenanigans-plan7 mayoral-race-shenanigans-plan8            mayoral-race-shenanigans-plan)   (requested              (BLANK          , resignation          ,        , BLANK , ,)))
+(ACPLAN(mayoral-race-shenanigans-plan8 mayoral-race-shenanigans-plan9            mayoral-race-shenanigans-plan)   (refused            (BLANK          ,      resignation     ,        , , ,)))
+(ACPLAN(mayoral-race-shenanigans-plan9 mayoral-race-shenanigans-plan10            mayoral-race-shenanigans-plan)  (decreased       (BLANK          , effort          ,        , , ,)))
+(ACPLAN(mayoral-race-shenanigans-plan10 mayoral-race-shenanigans-plan11            mayoral-race-shenanigans-plan) (drops-out       (BLANK          , mayoral-race           ,        , , ,)))
+(ACPLAN(mayoral-race-shenanigans-plan11 mayoral-race-shenanigans-planACPLAN-END   mayoral-race-shenanigans-plan)  (wanted-to-be-mayor-but-was-thwarted-by (agent          ,      political-opponents   ,   , , ,)))
+
+
+
+
+
+
+
+
+

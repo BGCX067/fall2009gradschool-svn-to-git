@@ -1,0 +1,4 @@
+(ACPLAN(runaway-planACPLAN-START  runaway-plan8            runaway-plan SUBPLAN run-away-from-subplan)  (   (          ,            ,        , , ,)))
+(ACPLAN(runaway-plan8 runaway-plan9            runaway-plan ISSUBPLAN TRUE)  (chase-down             (police-officers , BLANK     ,        , , ,)))
+(ACPLAN(runaway-plan9 runaway-plan10           runaway-plan ISSUBPLAN TRUE)  (get-away               (BLANK          , accomplice ,        , , ,)))
+(ACPLAN(runaway-plan10 runaway-planACPLAN-END  runaway-plan ISSUBPLAN TRUE)  (run-away-from-cops (     ,   ,   , , ,)))

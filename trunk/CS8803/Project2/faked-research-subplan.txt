@@ -1,0 +1,6 @@
+(ACPLAN(faked-research-planACPLAN-START faked-research-plan2 faked-research-plan ISSUBPLAN TRUE)  (investigating     (BLANK          , breach-bioethics-laws    ,        , , ,)))
+(ACPLAN(faked-research-plan2 faked-research-plan6            faked-research-plan ISSUBPLAN TRUE)  (reported           (BLANK          , papers          ,        , , ,)))
+(ACPLAN(faked-research-plan6 faked-research-plan7            faked-research-plan ISSUBPLAN TRUE)  (continuing         (BLANK          , investigation          ,        , , ,)))
+(ACPLAN(faked-research-plan7 faked-research-plan8            faked-research-plan ISSUBPLAN TRUE)  (faked              (BLANK          , prion-diseases-papers          ,        , , ,)))
+(ACPLAN(faked-research-plan8 faked-research-planACPLAN-END   faked-research-plan ISSUBPLAN TRUE) (conducted-fake-investigation (agent          ,      coagent   ,   , , ,)))
+

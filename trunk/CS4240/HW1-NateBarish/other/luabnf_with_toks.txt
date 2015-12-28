@@ -1,0 +1,187 @@
+chunk ::= chunk_rep_stat chunk_opt_laststat
+
+chunk_rep_stat ::= stat chunk_opt_semi chunk_rep_stat
+chunk_rep_stat ::= /* empty */
+
+chunk_opt_laststat ::= laststat chunk_opt_semi
+chunk_opt_laststat ::= /* empty */
+
+chunk_opt_semi ::= SEMI
+chunk_opt_semi ::= /* empty */
+
+
+
+
+block ::= chunk
+
+
+
+stat ::= varlist EQUALS explist
+
+stat ::= functioncall
+
+stat ::= DO block END
+
+stat ::= WHILE exp DO block END
+
+stat ::= REPEAT block UNTIL exp
+
+stat ::= IF exp THEN block stat_rep_elseif stat_opt_else END
+stat_rep_elseif ::= ELSEIF exp THEN block stat_rep_elseif
+stat_rep_elseif ::= /*empty*/
+stat_opt_else ::= ELSE block
+stat_opt_else ::= /*empty*/
+
+stat ::= FOR NAME EQUALS exp COMMA exp stat_opt_exp DO block END
+stat_opt_exp ::= COMMA exp
+stat_opt_exp ::= /*empty*/
+
+stat ::= FOR namelist IN explist DO block END
+
+stat ::= FUNCTION funcname funcbody
+
+stat ::= LOCAL FUNCTION NAME funcbody
+
+stat ::= LOCAL namelist stat_opt_explist
+stat_opt_explist ::= EQUALS explist 
+stat_opt_explist ::= /*empty*/
+
+
+
+laststat ::= RETURN laststat_opt_explist
+laststat_opt_explist ::= explist
+laststat_opt_explist ::= /*empty*/
+
+laststat ::= BREAK
+
+
+
+funcname ::= NAME funcname_rep_name funcname_opt_name
+funcname_rep_name ::= DOT NAME funcname_rep_name
+funcname_rep_name ::= /*empty*/
+funcname_opt_name ::= COLON NAME
+funcname_opt_name ::= /*empty*/
+
+
+
+varlist ::= var varlist_rep_var
+varlist_rep_var ::= COMMA var varlist_rep_var
+varlist_rep_var ::= /*empty*/
+
+
+
+var ::=  NAME 
+var ::= prefixexp OPEN_BRACK exp CLOSE_BRACK 
+var ::= prefixexp DOT NAME
+
+
+
+namelist ::= NAME namelist_rep_name
+namelist_rep_name ::= COMMA NAME namelist_rep_name
+namelist_rep_name ::= /*empty*/
+
+
+
+explist ::= explist_rep_exp exp
+explist_rep_exp ::= exp COMMA explist_rep_exp
+explist_rep_exp ::= /*empty*/
+
+
+
+exp ::= NIL 
+exp ::= FALSE
+exp ::= TRUE
+exp ::= NUMBER 
+exp ::= STRING 
+exp ::= DOTDOTDOT 
+exp ::= function
+exp ::= prefixexp 
+exp ::= tableconstructor 
+exp ::= exp binop exp 
+exp ::= unop exp 
+
+
+
+prefixexp ::= var 
+prefixexp ::= functioncall 
+prefixexp ::= OPEN_PAR exp CLOSE_PAR
+
+
+
+functioncall ::= prefixexp args 
+functioncall ::= prefixexp COLON NAME args 
+
+
+
+args ::=  OPEN_PAR args_opt_explist CLOSE_PAR 
+args_opt_explist ::= explist 
+args_opt_explist ::= /*empty*/
+args ::= tableconstructor 
+args ::= STRING 
+
+
+
+function ::= FUNCTION funcbody
+
+
+
+funcbody ::= OPEN_PAR funcbody_opt_parlist CLOSE_PAR block END
+funcbody_opt_parlist ::= parlist
+funcbody_opt_parlist ::= /*empty*/
+
+
+
+parlist ::= namelist parlist_opt_dots
+parlist_opt_dots ::= COMMA DOTDOTDOT
+parlist_opt_dots ::= /*empty*/
+parlist ::= DOTDOTDOT
+
+
+
+tableconstructor ::= OPEN_SQUIG tableconstructor_opt_fieldlist CLOSE_SQUIG
+tableconstructor_opt_fieldlist ::= fieldlist
+tableconstructor_opt_fieldlist ::= /*empty*/
+
+
+
+fieldlist ::= field fieldlist_rep_field fieldlist_opt_fieldsep
+fieldlist_rep_field ::= fieldsep field fieldlist_rep_field
+fieldlist_rep_field ::= /*empty*/
+fieldlist_opt_fieldsep ::= fieldsep
+fieldlist_opt_fieldsep ::= /*empty*/
+
+
+
+
+field ::= OPEN_BRACK exp CLOSE_BRACK EQUALS exp 
+field ::= NAME EQUALS exp 
+field ::= exp
+
+
+
+fieldsep ::= COMMA 
+fieldsep ::= SEMI
+
+
+
+binop ::= PLUS 
+binop ::= MINUS
+binop ::= STAR 
+binop ::= FSLASH
+binop ::= CARET
+binop ::= PERCENT 
+binop ::= DOTDOT
+binop ::= LESS
+binop ::= LESS_EQUAL
+binop ::= MORE
+binop ::= MORE_EQUAL
+binop ::= EQUAL_EQUAL
+binop ::= SQUIG_EQUAL
+binop ::= AND 
+binop ::= OR
+
+
+
+unop ::= MINUS
+unop ::= NOT
+unop ::= SHARP

@@ -1,0 +1,7 @@
+(ACPLAN(research-fraud-planACPLAN-START research-fraud-plan2 research-fraud-plan)  (researches         (BLANK          , BLANK            ,  , , ,)))
+(ACPLAN(research-fraud-plan2 research-fraud-plan33            research-fraud-plan)  (was-alerted        (BLANK          , anonymous-tip      ,  , , ,)))
+(ACPLAN(research-fraud-plan33 research-fraud-plan3 research-fraud-plan)  (investigating      (BLANK          , misuse-state-funds    ,  , , ,)))
+(ACPLAN(research-fraud-plan3 research-fraud-plan8            research-fraud-plan SUBPLAN faked-research-subplan)  (  (BLANK          ,     ,        , , ,)))
+(ACPLAN(research-fraud-plan8 research-fraud-plan9            research-fraud-plan)  (remains            (BLANK          ,           ,        , , ,)))
+(ACPLAN(research-fraud-plan9 research-fraud-plan10            research-fraud-plan) (not-expected       (BLANK          , shut-down          ,        , , ,)))
+(ACPLAN(research-fraud-plan10 research-fraud-planACPLAN-END   research-fraud-plan) (to-stop-fradulent-investigation-by (agent          ,      coagent   ,   , , ,)))

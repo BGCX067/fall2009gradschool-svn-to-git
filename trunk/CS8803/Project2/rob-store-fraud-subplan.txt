@@ -1,0 +1,8 @@
+(ACPLAN(rob-store-fraud-planACPLAN-START rob-store-fraud-plan3 rob-store-fraud-plan SUBPLAN goto-store-subplan)  (SUBFOO1                ( , , , , ,)))
+(ACPLAN(rob-store-fraud-plan3 rob-store-fraud-plan4            rob-store-fraud-plan SUBPLAN fake-id-subplan)  (SUBFOO2                   ( , , , , ,)))
+(ACPLAN(rob-store-fraud-plan4 rob-store-fraud-plan5            rob-store-fraud-plan ISSUBPLAN TRUE)  (suspect                (BLANK          , fraud      ,        , , ,)))
+(ACPLAN(rob-store-fraud-plan5 rob-store-fraud-plan6            rob-store-fraud-plan ISSUBPLAN TRUE)  (get-caught             (BLANK          ,            ,        , , ,)))
+(ACPLAN(rob-store-fraud-plan6 rob-store-fraud-plan7            rob-store-fraud-plan ISSUBPLAN TRUE)  (call                   (BLANK          , police     ,        , , ,)))
+(ACPLAN(rob-store-fraud-plan7 rob-store-fraud-plan10           rob-store-fraud-plan SUBPLAN runaway-subplan)  (SUBFOO3                   ( , , , , ,)))
+(ACPLAN(rob-store-fraud-plan10 rob-store-fraud-planACPLAN-END  rob-store-fraud-plan ISSUBPLAN TRUE)  (commit-fraud (agent          ,            ,  , , ,)))
+

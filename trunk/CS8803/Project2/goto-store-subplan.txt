@@ -1,0 +1,3 @@
+(ACPLAN(goto-store-planACPLAN-START goto-store-plan10 goto-store-plan ISSUBPLAN TRUE)  (go-to                  (BLANK          ,            , store  , , ,)))
+(ACPLAN(goto-store-plan10 goto-store-planACPLAN-END   goto-store-plan ISSUBPLAN TRUE)  (go-to-store (agent          ,            , , , ,)))
+

@@ -1,0 +1,445 @@
+(chunk 13 
+	(stat 13 
+		(functioncall 13 
+			(prefixexp 13 
+				(var 13 
+					(Name 13 print)
+				)
+			)
+			(args 13 
+				(( 13 )
+				(explist 13 
+					(exp 13 
+						(Number 13 314.16e-2)
+					)
+				)
+				() 13 )
+			)
+		)
+	)
+	(stat 15 
+		(functioncall 15 
+			(prefixexp 15 
+				(var 15 
+					(Name 15 print)
+				)
+			)
+			(args 15 
+				(( 15 )
+				(explist 15 
+					(exp 15 
+						(Number 15 0.31416E1)
+					)
+				)
+				() 15 )
+			)
+		)
+	)
+	(stat 26 
+		(local 26 )
+		(namelist 26 
+			(Name 26 string)
+		)
+		(= 26 )
+		(explist 26 
+			(exp 26 
+				(prefixexp 26 
+					(functioncall 26 
+						(prefixexp 26 
+							(var 26 
+								(Name 26 require)
+							)
+						)
+						(args 26 
+							(( 26 )
+							(explist 26 
+								(exp 26 
+									(String 26 string)
+								)
+							)
+							() 26 )
+						)
+					)
+				)
+			)
+		)
+	)
+	(stat 27 
+		(local 27 )
+		(namelist 27 
+			(Name 27 base)
+		)
+		(= 27 )
+		(explist 27 
+			(exp 27 
+				(prefixexp 27 
+					(var 27 
+						(Name 27 _G)
+					)
+				)
+			)
+		)
+	)
+	(stat 28 
+		(local 28 )
+		(namelist 28 
+			(Name 28 table)
+		)
+		(= 28 )
+		(explist 28 
+			(exp 28 
+				(prefixexp 28 
+					(functioncall 28 
+						(prefixexp 28 
+							(var 28 
+								(Name 28 require)
+							)
+						)
+						(args 28 
+							(( 28 )
+							(explist 28 
+								(exp 28 
+									(String 28 table)
+								)
+							)
+							() 28 )
+						)
+					)
+				)
+			)
+		)
+	)
+	(stat 29 
+		(functioncall 29 
+			(prefixexp 29 
+				(var 29 
+					(Name 29 module)
+				)
+			)
+			(args 29 
+				(( 29 )
+				(explist 29 
+					(exp 29 
+						(String 29 socket.url)
+					)
+				)
+				() 29 )
+			)
+		)
+	)
+	(stat 34 
+		(varlist 34 
+			(var 34 
+				(Name 34 _VERSION)
+			)
+		)
+		(= 34 )
+		(explist 34 
+			(exp 34 
+				(String 34 URL 1.0)
+			)
+		)
+	)
+	(stat 43 
+		(function 43 )
+		(funcname 43 
+			(Name 43 escape)
+		)
+		(funcbody 43 
+			(( 43 )
+			(parlist 43 
+				(namelist 43 
+					(Name 43 s)
+				)
+			)
+			() 43 )
+			(block 44 
+				(chunk 44 
+					(laststat 44 
+						(return 44 )
+						(explist 44 
+							(exp 44 
+								(prefixexp 44 
+									(functioncall 44 
+										(prefixexp 44 
+											(var 44 
+												(prefixexp 44 
+													(var 44 
+														(Name 44 string)
+													)
+												)
+												(. 44 )
+												(Name 44 gsub)
+											)
+										)
+										(args 44 
+											(( 44 )
+											(explist 44 
+												(exp 44 
+													(prefixexp 44 
+														(var 44 
+															(Name 44 s)
+														)
+													)
+												)
+												(, 44 )
+												(exp 44 
+													(String 44 ([^A-Za-z0-9_]))
+												)
+												(, 44 )
+												(exp 44 
+													(function 44 
+														(function 44 )
+														(funcbody 44 
+															(( 44 )
+															(parlist 44 
+																(namelist 44 
+																	(Name 44 c)
+																)
+															)
+															() 44 )
+															(block 45 
+																(chunk 45 
+																	(laststat 45 
+																		(return 45 )
+																		(explist 45 
+																			(exp 45 
+																				(prefixexp 45 
+																					(functioncall 45 
+																						(prefixexp 45 
+																							(var 45 
+																								(prefixexp 45 
+																									(var 45 
+																										(Name 45 string)
+																									)
+																								)
+																								(. 45 )
+																								(Name 45 format)
+																							)
+																						)
+																						(args 45 
+																							(( 45 )
+																							(explist 45 
+																								(exp 45 
+																									(String 45 %%%02x)
+																								)
+																								(, 45 )
+																								(exp 45 
+																									(prefixexp 45 
+																										(functioncall 45 
+																											(prefixexp 45 
+																												(var 45 
+																													(prefixexp 45 
+																														(var 45 
+																															(Name 45 string)
+																														)
+																													)
+																													(. 45 )
+																													(Name 45 byte)
+																												)
+																											)
+																											(args 45 
+																												(( 45 )
+																												(explist 45 
+																													(exp 45 
+																														(prefixexp 45 
+																															(var 45 
+																																(Name 45 c)
+																															)
+																														)
+																													)
+																												)
+																												() 45 )
+																											)
+																										)
+																									)
+																								)
+																							)
+																							() 45 )
+																						)
+																					)
+																				)
+																			)
+																		)
+																	)
+																)
+															)
+															(end 46 )
+														)
+													)
+												)
+											)
+											() 46 )
+										)
+									)
+								)
+							)
+						)
+					)
+				)
+			)
+			(end 47 )
+		)
+	)
+	(stat 49 
+		(functioncall 49 
+			(prefixexp 49 
+				(var 49 
+					(Name 49 print)
+				)
+			)
+			(args 49 
+				(( 49 )
+				(explist 49 
+					(exp 49 
+						(String 49 a very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringa very ver long stringEND)
+					)
+				)
+				() 49 )
+			)
+		)
+	)
+	(stat 51 
+		(functioncall 51 
+			(prefixexp 51 
+				(var 51 
+					(Name 51 print)
+				)
+			)
+			(args 51 
+				(( 51 )
+				(explist 51 
+					(exp 51 
+						(String 51 5! ?7 Octal is fucking1337 
+  y 	 \  apple 
+
+ 	 = abcd)
+					)
+				)
+				() 51 )
+			)
+		)
+	)
+	(stat 53 
+		(functioncall 53 
+			(prefixexp 53 
+				(var 53 
+					(Name 53 print)
+				)
+			)
+			(args 53 
+				(( 53 )
+				(explist 53 
+					(exp 53 
+						(String 53 string with keywords and or not do else end false function if local nil return then until while ; , ... . [ ( ) } : - ^ % <= > == ~= $)
+					)
+				)
+				() 53 )
+			)
+		)
+	)
+	(stat 57 
+		(functioncall 57 
+			(prefixexp 57 
+				(var 57 
+					(Name 57 print)
+				)
+			)
+			(args 57 
+				(( 57 )
+				(explist 57 
+					(exp 57 
+						(String 57 " " " " ')
+					)
+				)
+				() 57 )
+			)
+		)
+	)
+	(stat 58 
+		(functioncall 58 
+			(prefixexp 58 
+				(var 58 
+					(Name 58 print)
+				)
+			)
+			(args 58 
+				(( 58 )
+				(explist 58 
+					(exp 58 
+						(String 58  ' ' ' ")
+					)
+				)
+				() 58 )
+			)
+		)
+	)
+	(stat 61 
+		(functioncall 61 
+			(prefixexp 61 
+				(var 61 
+					(Name 61 print)
+				)
+			)
+			(args 61 
+				(( 61 )
+				(explist 72 
+					(exp 72 
+						(String 72 this is a very long
+
+string with : " all kinds og \ kraxy stiff in it
+
+]==] just kidding not ovver yet
+
+]=] still no
+
+[==[ tricked again bitches
+
+)
+					)
+				)
+				() 72 )
+			)
+		)
+	)
+	(stat 74 
+		(functioncall 74 
+			(prefixexp 74 
+				(var 74 
+					(Name 74 print)
+				)
+			)
+			(args 74 
+				(( 74 )
+				(explist 79 
+					(exp 79 
+						(String 79 
+count em thats like a bunch of equals, OVER 9000!!!, in there wich means no way ]] or ]==] 
+are ending this string.
+
+)
+					)
+				)
+				() 79 )
+			)
+		)
+	)
+	(stat 92 
+		(functioncall 92 
+			(prefixexp 92 
+				(var 92 
+					(Name 92 print)
+				)
+			)
+			(args 92 
+				(( 92 )
+				(explist 92 
+					(exp 92 
+						(String 92 )
+					)
+				)
+				() 92 )
+			)
+		)
+	)
+)

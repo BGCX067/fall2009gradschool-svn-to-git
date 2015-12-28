@@ -1,0 +1,330 @@
+parked
+pre 	%AGENT 		inCar 		true
+pre 	%AGENT 		location 	%LOC
+post	%AGENT		inCar		false
+
+walked-toward
+pre		%AGENT		inCar		false
+post	%AGENT		location	%OBJECT
+
+# HC
+grabbed
+pre		robbers		location	market
+post	robbers		attacked	true
+
+got-scared
+pre		%AGENT		attacked	true
+post	%AGENT		scared		true
+
+run-away
+pre		%AGENT		scared		true
+post	%AGENT		scared		false
+post	%AGENT		location	away
+
+# -------------------------------------------------
+
+# HC
+entered-car
+pre		%AGENT		inCar		false
+post	%AGENT		inCar		true
+post	%AGENT		cornered	true
+post	car-door	state		closed
+
+# HC
+came-from
+pre		employee	cornered	true
+post	%AGENT		next-to		car-door
+
+opened
+pre		%OBJECT		state		closed
+pre		%AGENT		next-to		%OBJECT
+post	%OBJECT		state		open
+
+# HC
+pulled-from
+pre		%OBJECT		inCar		true
+pre		car-door	state		open
+pre		%AGENT		next-to		car-door
+post	%OBJECT		inCar		false
+post	%OBJECT		location	outside-car
+post	purse		loose		false
+
+# HC
+attempted-snatch
+pre		%OBJECT		loose		false
+post	%OBJECT		loose		true
+
+snatch
+pre		%OBJECT		loose		true
+post	%AGENT		has			%OBJECT
+
+# HC
+yelled
+pre		man			has			purse
+post	%AGENT		volume		loud
+post	man			threatened	true
+
+# HC
+hit
+pre		%AGENT		threatened	true
+post	%COAGENT	hurt		true
+
+knocked-down
+pre		%AGENT		threatened	true
+pre		%OBJECT		hurt		true
+post	%OBJECT		standing	false
+
+# HC
+ran-away-without
+pre		%AGENT		threatened	true
+pre		employee	standing	false
+post	%AGENT		location	away
+post	%AGENT		has-not		%OBJECT
+
+# -------------------------------------------------
+
+go-to
+pre		%AGENT		wants-to-go	%OBJECT
+post	%AGENT		location	%OBJECT
+
+# HC - way messed
+give
+pre		%AGENT		location	store
+post	%AGENT		has-not		%OBJECT
+post	%COAGENT	has			%OBJECT
+
+# HC
+suspect
+pre		%AGENT			has				fake-id
+post	robert-e-ford	suspicious		true
+post	%AGENT			wants-report	robert-e-ford
+
+get-caught
+pre		%AGENT		suspicious		true
+post	%AGENT		scared			true
+
+# HC
+call
+pre		%AGENT		wants-report	robert-e-ford
+post	%OBJECT		aware			robert-e-ford
+
+# HC
+chase-down
+pre		police				aware		robert-e-ford
+post	police-officers		near		robert-e-ford
+
+# HC
+get-away
+pre		police-officers		near		%AGENT
+post	%AGENT				location	safety
+
+# -------------------------------------------------
+
+required
+post	%AGENT		needs		start-up-funds		
+
+invested
+pre		%COAGENT		needs			start-up-funds
+post	%COAGENT		investor		%AGENT
+
+working-on
+pre		%COAGENT		needs					start-up-funds
+post	%AGENT			additional-funding		300000
+
+# HC
+cured-disease
+pre		%AGENT		tested-cows		true
+pre		%AGENT		tested-mice		true
+post	%AGENT		has-cure		%OBJECT
+
+# HC
+founded
+pre		%OBJECT		investor		washington-state
+pre		%OBJECT		additional-funding	300000
+post	%OBJECT		built			true
+
+broke-ground
+pre		boynton-labs	built		true
+post	boynton-labs	ready		true
+
+started
+pre		%OBJECT		ready			true
+post	%OBJECT		active			true
+
+have-developed
+pre		%AGENT		active			true
+post	%AGENT		has-made		%OBJECT
+
+injected-cow
+pre		%AGENT		has-made		%OBJECT
+post	%AGENT		tested-cows		true
+
+injected-mouse
+pre		%AGENT		has-made		%OBJECT
+post	%AGENT		tested-mice		true
+
+announced-investigation
+pre		%OBJECT		tested-cows		true
+pre		%OBJECT		tested-mice		true
+post	%OBJECT		investigated	true	
+
+treatment-mouse
+pre		%AGENT		has-made		%OBJECT
+pre		%AGENT		investigated	true
+post	%AGENT		cured-mice		true
+
+treatment-cow
+pre		%AGENT		has-made		%OBJECT
+pre		%AGENT		investigated	true
+post	%AGENT		cured-cows		true
+
+cured-disease
+pre		%AGENT		cured-cows		true
+pre		%AGENT		cured-mice		true
+post	%AGENT		has-cure		%OBJECT
+
+discontinued-investigation
+pre		%OBJECT		has-cure		prion-disease
+
+# -------------------------------------------------
+
+wants
+post	%AGENT		wants			voting-machines
+
+vulnerable
+post	%AGENT		vulnerable		%OBJECT
+
+signed-contract
+pre		%AGENT		wants			%OBJECT
+post	%OBJECT		contracted		true
+
+installed
+pre		%OBJECT		contracted		true
+post	%OBJECT		installed		true
+
+had-problems
+pre		%OBJECT		installed		true
+pre		%OBJECT		vulnerable		tampering
+post	voters		upset			%OBJECT
+
+pledged-answer
+pre		voters		upset			%OBJECT
+post	%AGENT		take-action		%OBJECT
+
+asked-to-investigate
+pre		%AGENT		take-action		%OBJECT
+post	%AGENT		took-action		%OBJECT
+
+received
+pre		%AGENT		took-action		voting-machines
+post	%AGENT		possesses		%OBJECT
+
+voted-against
+post	%AGENT		anti-drinking	true
+
+opposed
+pre		%AGENT		anti-drinking	true
+post	%AGENT		anti-gambling	true
+
+raised
+pre		%AGENT		anti-drinking	true
+pre		%AGENT		anti-gambling	true
+post	%AGENT		afford-election	true
+
+runs-for
+pre		%AGENT		afford-election		true
+post	%AGENT		in-race				%OBJECT
+
+were-taken
+post	steamy-photos	taken		true
+
+print
+pre		steamy-photos	taken			true
+post	john-torch		embarrassed		true
+
+requested
+pre		%COAGENT		embarrassed		true
+post	%COAGENT		controversy		true
+
+refused
+pre		%AGENT			controversy		true
+post	%AGENT			stubborn		true
+
+decreased
+pre		%AGENT			stubborn		true
+post	%AGENT			effort			low
+
+drops-out
+pre		%AGENT			effort			low
+post	%AGENT			in-race			false
+
+# -------------------------------------------------
+
+faked
+post	%AGENT			has-fake		%OBJECT
+
+reported
+pre		%AGENT			has-fake		prion-diseases-papers
+post	%COAGENT		received		%OBJECT
+
+# Total hack
+was-alerted
+pre		%AGENT			received		papers
+post	%AGENT			alerted			%COAGENT
+
+investigating
+pre		%AGENT			alerted			von-ryker-institute
+post	%AGENT			poss-shut-down	von-ryker-institute
+
+not-expected
+pre		swiss-research-board	poss-shut-down		von-ryker-institute
+post	von-ryker-institute		will-shut-down		false
+
+remains
+pre		von-ryker-institute		will-shut-down		false
+post	%AGENT					is					%OBJECT
+
+continuing
+pre		swiss-research-board	poss-shut-down		von-ryker-institute
+
+# -------------------------------------------------
+
+outbreak
+post	world	afraid-of	%LOC
+
+imposed-ban
+pre		world		afraid-of	argentina
+post	feed-ban	on			argentine-beef
+
+not-enforced
+pre		feed-ban	on			argentine-beef
+post	us			accepting	bad-pork
+
+received
+pre		us			accepting	bad-pork
+post	us			received	bad-pork
+post	us			fears		mad-cow-disease
+
+chose
+pre		us				fears		mad-cow-disease
+post	boynton-labs	allowed		mad-cow-disease-tests
+
+approved
+pre		boynton-labs	allowed		mad-cow-disease-tests
+post	boynton-labs	allowed		rapid-testing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

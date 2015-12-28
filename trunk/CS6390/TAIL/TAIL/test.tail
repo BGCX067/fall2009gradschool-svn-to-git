@@ -1,0 +1,54 @@
+TYPEDEF Int  BASIC
+TYPEDEF Bool BASIC
+TYPEDEF Fun  FUNCTION Int Bool
+TYPEDEF Fun2  FUNCTION Int Int
+TYPEDEF Foo PRODUCT x Int y Bool
+TYPEDEF SumFoo SUM q Int w Bool
+TYPEDEF Prod PRODUCT a Fun b Fun
+TYPEDEF m SEQUENCE Int
+TYPEDEF mn SEQUENCE Int
+TYPEDEF sub1 SUBTYPE Prod c Int b Int n Bool
+
+VARDECL ii Int
+VARDECL fi Fun
+VARDECL f Fun
+VARDECL pi Prod
+VARDECL g Fun2
+VARDECL i Int
+VARDECL j Int
+VARDECL b Bool
+VARDECL p Foo
+VARDECL h SumFoo
+VARDECL gh sub1
+VARDECL seqq mn
+
+
+(gh)
+(seqq)
+(ACCESSP gh c)
+(MKPROD pi a fi b fi)
+(ACCESSP pi a)
+(ACCESSP Prod a)
+(ACCESSP (MKPROD pi a fi b fi) a)
+(p)
+(HEAD m)
+(CONS m m)
+(NIL m)
+(CONS m (CONS m (NIL m)))
+(HEAD (CONS m (CONS m (NIL m))))
+(TAIL (CONS m (CONS m (NIL m))))
+(HEAD (TAIL (CONS m (CONS m (NIL m)))))
+(HEAD (TAIL (CONS mn (CONS mn (NIL mn)))))
+(NIL m)
+(ACCESSP (TREATAS h q h) q)
+(ACCESSP (EMBED h q h) q)
+(TREATAS h w h)
+(EMBED h j)
+(ACCESSP p y)
+(MKPROD p x i y b)
+(f i)
+(f j)
+(f (g i))
+(f (g (g i)))
+(f (g j))
+(g (g (g (g (g j)))))

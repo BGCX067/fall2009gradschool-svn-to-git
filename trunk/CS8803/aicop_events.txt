@@ -1,0 +1,217 @@
+(stolen( , money $40 , highway-tire-store , , ))
+(drops-out(john-torch , mayoral-race , , , ))
+(print( , steamy-photos(john-torch female-companion) , starbucks , , ))
+(cured-disease(boynton-labs , prion-disease , , , ))
+(founded( , boynton-labs , , , ))
+(have-developed(boynton-labs , prion-disease , , , ))
+(announced-investigation(usfda , boynton-labs , , , ))
+(discontinued-investigation(usfda , boynton-labs , , , ))
+(injected-mouse(boynton-labs , prion-disease , , , ))
+(injected-cow(boynton-labs , prion-disease , , , ))
+(treatment-mouse(boynton-labs , prion-disease , , , ))
+(treatment-cow(boynton-labs , prion-disease , , , ))
+(kicked-in( , door , daves-recycling-center , , ))
+(not-stolen( , money equipment , , , ))
+(cash( , washington-state-unemployment-check , , , ))
+(go-to(robert-e-ford , store , , , ))
+(give(robert-e-ford , fake-check , , clerk , ))
+(give(robert-e-ford , fake-id , , clerk , ))
+(get-caught(robert-e-ford , , , , ))
+(suspect(clerk , fraud , , , ))
+(call(clerk , police , , , ))
+(run-away(robert-e-ford , , , , ))
+(chase-down(police-officers , robert-e-ford , , , ))
+(get-away(robert-e-ford , , , accomplice , ))
+(entered-car(employee , , , , ))
+(snatch(man , purse , , , ))
+(came-from(man , , behind-bushes , , ))
+(opened(man , car-door , , , ))
+(yelled(employee , , , , ))
+(pulled-from(man , employee , car , , ))
+(attempted-snatch(man , purse , , , ))
+(hit(man , head , , employee , ))
+(knocked-down(man , employee , , , ))
+(ran-away-without(man , purse , , , ))
+(parked(robbers , car , , , ))
+(walked-toward(robbers , market , , , ))
+(got-scared(robbers , , , , ))
+(grabbed(dog , robber pants , , , ))
+(run-away(robbers , , , , ))
+(voted-against(john-torch , liqour-license , , , ))
+(worked-with(philip-boynton , rex-luthor , , , ))
+(requested(pete-sartin , resignation , , john-torch , ))
+(refused(john-torch , resignation , , , ))
+(runs-for(john-torch , alderwood-mayor , , , ))
+(disagrees(city-council , bob-leeds , , , ))
+(signed-contract(rex-luthor , voting-machines , , , ))
+(installed( , voting-machines , , , ))
+(were-taken( , steamy-photos(john-torch brunette-woman) , starbucks , , ))
+(received(rex-luthor , 50000-contribution , , republican-boosters , ))
+(raised(john-torch , 30000 , , , ))
+(decreased(john-torch , effort , , , after-starbucks-scandal))
+(opposed(john-torch , gambling , , , ))
+(had-problems(voters , voting-machines , , , ))
+(asked-to-investigate(rex-luthor , voting-machines , , , ))
+(pledged-answer(rex-luthor , voting-machines , , , ))
+(reported(von-ryker , papers , , swiss-research-board , ))
+(faked(von-ryker , prion-diseases-papers , , , ))
+(remains(von-ryker , director-von-ryker-institute , , , ))
+(investigating(von-ryker , breach-bioethics-laws , , , ))
+(investigating(swiss-research-board , misuse-state-funds , , von-ryker , ))
+(was-alerted(swiss-research-board , anonymous-tip , , von-ryker-institute , ))
+(researches(swiss-research-board , transmissible-spongiform-encephalopathies , , , ))
+(not-expected( shut-down(von-ryker-institute) , , , , ))
+(continuing(swiss-research-board , investigation , , von-ryker-institute , ))
+(invested(washington-state , 250000 , , boynton-labs , ))
+(working-on( washingtion-state-legislature , additional-funding 300000 , , boynton-labs , ))
+(invested(philip-boynton , 25000 , , boynton-labs , ))
+(broke-ground(governor-gary-locke , boynton-labs , , philip-boynton , ))
+(started( two-key-scientists , boynton-labs , , , ))
+(background-in(scientists , medicine-science protein-science , , , ))
+(received(us , 650000-pounds-foreign-pork , , embargoed-country , ))
+(not-enforced(fda , , feed-ban , , ))
+(approved( agriculture-department , rapid-testing-boynton-labs , , , ))
+(outbreak(mad-cow-disease , , argentina , , ))
+(imposed-ban(philippines , argentine-beef , , , ))
+(chose(us-government , boynton-labs test-for-mad-cow-disease , , , ))
+
+
+
+stolen
+drops-out                       has to happen after starting whatever was dropped
+print                           ?
+cured-disease                   disease has to have started
+founded                         happens before people do stuff with whatever was founded
+have-developed                  happens before cured, maybe after injection and treatment
+announced-investigation         happens before discountinued
+discontinued-investigation      happens after announced
+injected-mouse                  
+injected-cow                    
+treatment-mouse                 happens after injecting mouse
+treatment-cow
+kicked-in                       ?
+not-stolen                      ?
+cash                            ?
+go-to                           object, probably first event
+give                            
+get-caught                      happens after something is done, like giving fake documents
+suspect                         happens after something bad is done, and before getting caught
+call                            calls the police, 
+run-away
+chase-down
+get-away
+entered-car
+snatch
+came-from
+opened
+yelled
+pulled-from
+attempted-snatch
+hit
+knocked-down
+ran-away-without
+parked
+walked-toward
+got-scared
+grabbed
+voted-against
+worked-with
+requested
+refused
+runs-for
+disagrees
+signed-contract
+installed
+were-taken
+received
+raised
+decreased
+opposed
+had-problems
+asked-to-investigate
+pledged-answer
+reported
+faked
+remains
+investigating
+was-alerted
+researches
+not-expected
+continuing
+invested
+working-on
+broke-ground
+started
+background-in
+not-enforced
+approved
+outbreak
+imposed-ban
+chose
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

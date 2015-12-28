@@ -1,0 +1,2 @@
+bar -> foo '|' asdf.
+bar -> foo  asdf '.' .

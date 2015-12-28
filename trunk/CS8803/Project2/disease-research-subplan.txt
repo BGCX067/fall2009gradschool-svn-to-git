@@ -1,0 +1,8 @@
+(ACPLAN(disease-research-and-development-planACPLAN-START disease-research-and-development-plan7 disease-research-and-development-plan ISSUBPLAN TRUE)  (injected-mouse                   (BLANK          , BLANK     ,        , , ,)))
+(ACPLAN(disease-research-and-development-plan7 disease-research-and-development-plan8            disease-research-and-development-plan ISSUBPLAN TRUE)  (treatment-mouse               (BLANK          ,       BLANK     ,        , , ,)))
+(ACPLAN(disease-research-and-development-plan8 disease-research-and-development-plan9            disease-research-and-development-plan ISSUBPLAN TRUE)  (injected-cow            (BLANK , BLANK     ,        , , ,)))
+(ACPLAN(disease-research-and-development-plan9 disease-research-and-development-plan10           disease-research-and-development-plan ISSUBPLAN TRUE)  (treatment-cow               (BLANK          , BLANK ,        , , ,)))
+(ACPLAN(disease-research-and-development-plan10 disease-research-and-development-plan11           disease-research-and-development-plan ISSUBPLAN TRUE)  (have-developed               (BLANK          , BLANK ,        , , ,)))
+(ACPLAN(disease-research-and-development-plan11 disease-research-and-development-plan12           disease-research-and-development-plan ISSUBPLAN TRUE)  (cured-disease               (BLANK          , BLANK ,        , , ,)))
+(ACPLAN(disease-research-and-development-plan12 disease-research-and-development-planACPLAN-END  disease-research-and-development-plan ISSUBPLAN TRUE)  (develop-disease (agent          ,   object  ,   , , ,)))
+

@@ -1,0 +1,42 @@
+(chunk 1
+	(stat 1
+		(function 1 
+			(funcname 1 
+				(NAME 1 factorial)
+			)
+			(funcbody 1
+				(parlist 1 
+					(namelist 1 
+						(Name 1 n)
+					)
+					(block 2 
+						(chunk 2
+							(stat 2 
+								(if 2 
+									(binop 
+										(exp 2 
+											(prefixexp 2 
+												(var 2 
+													(Name 2 n)
+												)
+											)
+										) 
+										(== 2 ) 
+										(exp 2
+											(Number 2 0)
+										)
+									)
+									(then 2 )
+									(block 3
+										(chunk 3
+											(laststat 3
+												(return 3
+													(explist 3
+														(exp 3
+															(Number 3 1)
+														)
+													)
+												)
+											)
+										)
+									) 
